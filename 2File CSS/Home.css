@@ -1,0 +1,39 @@
+/*? -------------------------- */
+    /***** nền *****/
+    /***** box *****/
+    /***** box ảo *****/
+    /***** box biến *****/
+    /***** box chữ cái *****/
+    /***** box nút *****/
+    /***** box item *****/
+    /***** box phim *****/
+    /***** box ảnh *****/
+    /***** transform *****/
+    /***** animation *****/
+    /***** ABC *****/
+/*? -------------------------- */
+
+/* Mobile */
+@media (max-width: 480px) { 
+
+}
+
+/* Tablet */
+@media (max-width: 768px) { 
+
+}
+
+/* Laptop */
+@media (max-width: 1024px) { 
+
+}
+
+/* Desktop */
+@media (max-width: 1440px) { 
+
+}
+
+/* TV / 4K */
+@media (min-width: 1920px) { 
+
+}
