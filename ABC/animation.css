@@ -1,0 +1,410 @@
+/*? -------------------------- 
+border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
+--- Ví dụ: ---
+10px → góc trên trái [top-left]
+15px → góc trên phải [top-right]
+20px → góc dưới phải [bottom-right]
+25px → góc dưới trái [bottom-left]
+——————————————————————————————
+10px ┌──────────┐ 15px
+     │          │
+25px └──────────┘ 20px         
+—————————————————————————————— */
+/*? -------------------------- */
+
+/** ---------- Animation ---------- */
+/*? animation: name duration timing-function delay iteration-count direction fill-mode; */
+/* --------------------------
+  animation-name             : name;
+  animation-duration         : duration;
+  animation-timing-function  : timing-function;
+  animation-delay            : delay;
+  animation-iteration-count  : iteration-count;
+  animation-direction        : direction;
+  animation-fill-mode        : fill-mode;
+-------------------------- */
+/* --------------------------
+  transform-origin           : origin;
+  transition-duration        : duration;
+  transition-timing-function : timing-function;
+  transition-delay           : delay;
+  transition-property        : property;
+-------------------------- */
+
+/** ---------- wiggle ---------- */
+:root { /* --- var wiggle --- */
+  --wiggle-         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  --wiggle--left    : polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+  --wiggle--right   : polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+}
+/* --- Animation wiggle --- */
+#animation_box_wiggle {
+  clip-path: var(--wiggle-);
+}
+#animation_box_wiggle:hover {
+  animation-name             : wiggle;
+  animation-duration         : 0.3s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes wiggle {
+  0% {clip-path: var(--wiggle-);}
+  25% {clip-path: var(--wiggle--left);}
+  50% {clip-path: var(--wiggle-);}
+  75% {clip-path: var(--wiggle--right);}
+  100% {clip-path: var(--wiggle-);}
+}
+
+/** ---------- wiggle-up ---------- */
+
+:root { /* --- var wiggle-up --- */
+  --wiggle-up-         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  --wiggle-up--left    : polygon(0 0, 80% 0, 90% 100%, 10% 100%);
+  --wiggle-up--right   : polygon(20% 0, 100% 0, 90% 100%, 10% 100%);
+}
+/* --- Animation wiggle-up --- */
+#animation_box_wiggle__up {
+  clip-path: var(--wiggle-up-);
+}
+#animation_box_wiggle__up:hover {
+  animation-name             : wiggle-up;
+  animation-duration         : 0.3s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes wiggle-up {
+  0% {clip-path: var(--wiggle-up-);}
+  25% {clip-path: var(--wiggle-up--left);}
+  50% {clip-path: var(--wiggle-up-);}
+  75% {clip-path: var(--wiggle-up--right);}
+  100% {clip-path: var(--wiggle-up-);}
+}
+
+/** ---------- wiggle-down ---------- */
+:root { /* --- var wiggle-down --- */
+  --wiggle-down-         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  --wiggle-down--left    : polygon(10% 0, 90% 0, 100% 100%, 20% 100%);
+  --wiggle-down--right   : polygon(10% 0, 90% 0, 80% 100%, 0% 100%);
+}
+/* --- Animation wiggle-down --- */
+#animation_box_wiggle__down {
+  clip-path: var(--wiggle-down-);
+}
+#animation_box_wiggle__down:hover {
+  animation-name             : wiggle-down;
+  animation-duration         : 0.3s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes wiggle-down {
+  0% {clip-path: var(--wiggle-down-);}
+  25% {clip-path: var(--wiggle-down--left);}
+  50% {clip-path: var(--wiggle-down-);}
+  75% {clip-path: var(--wiggle-down--right);}
+  100% {clip-path: var(--wiggle-down-);}
+}
+
+/* --- Transition wiggle left --- */
+#transition_box_wiggle__left {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__left:hover {
+  clip-path: var(--wiggle--left);
+}
+
+/* --- Transition wiggle right --- */
+#transition_box_wiggle__right {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__right:hover {
+  clip-path: var(--wiggle--right);
+}
+
+/* --- Transition wiggle top-left --- */
+#transition_box_wiggle__up_left {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__up_left:hover {
+  clip-path: var(--wiggle-up--left);
+}
+
+/* --- Transition wiggle top-right --- */
+#transition_box_wiggle__up_right {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__up_right:hover {
+  clip-path: var(--wiggle-up--right);
+}
+
+/* --- Transition wiggle down-right --- */
+#transition_box_wiggle__down_right {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__down_right:hover {
+  clip-path: var(--wiggle-down--right);
+}
+
+/* --- Transition wiggle down-left --- */
+#transition_box_wiggle__down_left {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__down_left:hover {
+  clip-path: var(--wiggle-down--left);
+}
+
+/* --- Transition wiggle down-right --- */
+#transition_box_wiggle__down_right {
+  clip-path                  : var(--wiggle-);
+  transition-duration        : 0.3s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_wiggle__down_right:hover {
+  clip-path: var(--wiggle-down--right);
+}
+
+/** ---------- corners ---------- */
+:root { /* --- var corners --- */
+  /* radius-% */
+  --corners-A--_: 0%;
+  --corners-A--_--up-left     : 0% 0% 0% 0%;
+  --corners-A--_--up-right    : 0% 0% 0% 0%;
+  --corners-A--_--down-right  : 0% 0% 0% 0%;
+  --corners-A--_--down-left   : 0% 0% 0% 0%;
+  --corners-B--_: 10%;
+  --corners-B--_--up-left     : 10% 0% 0% 0%;
+  --corners-B--_--up-right    : 0% 10% 0% 0%;
+  --corners-B--_--down-right  : 0% 0% 10% 0%;
+  --corners-B--_--down-left   : 0% 0% 0% 10%;
+
+  /* radius-px */
+  --corners-A--px: 0px;
+  --corners-A--px--up-left     : 0px 0px 0px 0px;
+  --corners-A--px--up-right    : 0px 0px 0px 0px;
+  --corners-A--px--down-right  : 0px 0px 0px 0px;
+  --corners-A--px--down-left   : 0px 0px 0px 0px;
+  --corners-B--px: 10px;
+  --corners-B--px--up-left     : 10px 0px 0px 0px;
+  --corners-B--px--up-right    : 0px 10px 0px 0px;
+  --corners-B--px--down-right  : 0px 0px 10px 0px;
+  --corners-B--px--down-left   : 0px 0px 0px 10px;
+}
+/* --- Animation corners px --- */
+#animation_box_corners__px {
+  border-radius: 0px;
+}
+#animation_box_corners__px:hover {
+  animation-name             : corners;
+  animation-duration         : 0.5s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes corners {
+  0% {border-radius: var(--corners-A--px);}
+  50% {border-radius: calc(var(--corners-B--px) + 0.5vw);}
+  100% {border-radius: var(--corners-A--px);}
+}
+
+/* --- Animation corners % --- */
+#animation_box_corners___ {
+  border-radius: 0%;
+}
+#animation_box_corners___:hover {
+  animation-name             : corners;
+  animation-duration         : 0.5s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes corners {
+  0% {border-radius: var(--corners-A--_);}
+  50% {border-radius: calc(var(--corners-B--_) + 1vw);}
+  100% {border-radius: var(--corners-A--_);}
+}
+
+/* --- Transition corners % --- */
+#transition_box_corners___ {
+  border-radius              : var(--corners-A--_);
+  transition-duration        : 0.5s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_corners___:hover {
+  border-radius: calc(var(--corners-B--_) + 1vw);
+}
+
+/* --- Transition corners px --- */
+#transition_box_corners__px {
+  border-radius              : var(--corners-A--px);
+  transition-duration        : 0.5s;
+  transition-timing-function : linear;
+  transition-delay           : 0s;
+}
+#transition_box_corners__px:hover {
+  border-radius: calc(var(--corners-B--px) + 0.5vw);
+}
+
+/** ---------- underline ---------- */
+:root { /* --- var underline --- */
+  /* underline */
+  --underline-0--_: 0%;
+  --underline-100--_: 100%;
+  --underline-0--px: 0%;
+  --underline-100--px: 100%;
+}
+/* Transition box underline left */
+#transition_tem_underline__left {
+  position: relative;
+}
+#transition_tem_underline__left::after {
+  content                                : "";
+  position                               : absolute;
+  background                             : var(--background-color-A-);
+  border-radius                          : 100px;
+  width                                  : var(--underline-0--_);
+  height                                 : calc(var(--font-size-) / 8);
+  top                                    : calc(var(--font-size-) + var(--calc-A-));
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_underline__left::after {
+  width: var(--underline-100--_);
+  background: var(--color-B-);
+}
+
+/* Transition box underline right */
+#transition_tem_underline__right {
+  position: relative;
+}
+#transition_tem_underline__right::after {
+  content                                : "";
+  position                               : absolute;
+  background                             : var(--color-A-);
+  border-radius                          : 100px;
+  width                                  : var(--underline-0--_);
+  height                                 : calc(var(--font-size-) / 8);
+  top                                    : calc(var(--font-size-) + var(--calc-A-));
+  right                                  : 0;
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_underline__right::after {
+  width: var(--underline-100--_);
+  background: var(--color-B-);
+}
+
+/* Transition box underline go-left */
+#transition_tem_underline__go_left {
+  position: relative;
+}
+#transition_tem_underline__go_left::before {
+  content                                : "";
+  position                               : absolute;
+  background                             : var(--color-A-);
+  border-radius                          : 100px;
+  width                                  : var(--underline-0--_);
+  height                                 : calc(var(--font-size-) / 8);
+  top                                    : calc(var(--font-size-) + var(--calc-A-));
+  right                                  : 0;
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_underline__go_left::before {
+  width: var(--underline-100--_);
+  background: var(--color-B-);
+  left: 0;
+}
+
+/* Transition box underline go-right */
+#transition_tem_underline__go_right {
+  position: relative;
+}
+#transition_tem_underline__go_right::before {
+  content                                : "";
+  position                               : absolute;
+  background                             : var(--color-A-);
+  border-radius                          : 100px;
+  width                                  : var(--underline-0--_);
+  height                                 : calc(var(--font-size-) / 8);
+  top                                    : calc(var(--font-size-) + var(--calc-A-));
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_underline__go_right::before {
+  width: var(--underline-100--_);
+  background: var(--color-B-);
+  right: 0;
+}
+
+/* Animation box underline go-left */
+#animation_tem_underline__go_left {
+  position: relative;
+  overflow: hidden;
+}
+#animation_tem_underline__go_left::before {
+  content                                : "";
+  position                               : absolute;
+  background                             : var(--color-A-);
+  border-radius                          : 100px;
+  width                                  : var(--underline-0--_);
+  height                                 : calc(var(--font-size-) / 8);
+  top                                    : calc(var(--font-size-) + var(--calc-A-));
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#animation_tem_underline__go_left::before {
+  --width-                   : 30%;
+  --height-                  : 0%;
+  animation-name             : underline-go-left;
+  animation-duration         : 1s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes underline-go-left {
+  0% {
+    width: var(--width-);
+    left: calc(var(--width-) * -1);
+  }
+  100% {
+    width: var(--width-);
+    left: 100%;
+  }
+}
+
+/* Animation box underline go-right */
+
+
