@@ -56,7 +56,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   100% {clip-path: var(--wiggle-);}
 }
 
-/** ---------- wiggle-up ---------- */
+/** ---------- wiggle up ---------- */
 
 :root { /* --- var wiggle-up --- */
   --wiggle-up-         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
@@ -82,7 +82,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   100% {clip-path: var(--wiggle-up-);}
 }
 
-/** ---------- wiggle-down ---------- */
+/** ---------- wiggle down ---------- */
 :root { /* --- var wiggle-down --- */
   --wiggle-down-         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
   --wiggle-down--left    : polygon(10% 0, 90% 0, 100% 100%, 20% 100%);
@@ -107,6 +107,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   100% {clip-path: var(--wiggle-down-);}
 }
 
+/** ---------- wiggle ---------- */
 /* --- Transition wiggle left --- */
 #transition_box_wiggle__left {
   clip-path                  : var(--wiggle-);
@@ -129,7 +130,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   clip-path: var(--wiggle--right);
 }
 
-/* --- Transition wiggle top-left --- */
+/* --- Transition wiggle up-left --- */
 #transition_box_wiggle__up_left {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
@@ -140,7 +141,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   clip-path: var(--wiggle-up--left);
 }
 
-/* --- Transition wiggle top-right --- */
+/* --- Transition wiggle up-right --- */
 #transition_box_wiggle__up_right {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
@@ -266,7 +267,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   border-radius: calc(var(--corners-B--px) + 0.5vw);
 }
 
-/** ---------- underline ---------- */
+/** ---------- tem underline ---------- */
 :root { /* --- var underline --- */
   /* underline */
   --underline-0--_: 0%;
@@ -274,7 +275,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --underline-0--px: 0%;
   --underline-100--px: 100%;
 }
-/* Transition box underline left */
+/* Transition tem underline left */
 #transition_tem_underline__left {
   position: relative;
 }
@@ -297,7 +298,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   background: var(--color-B-);
 }
 
-/* Transition box underline right */
+/* Transition tem underline right */
 #transition_tem_underline__right {
   position: relative;
 }
@@ -321,7 +322,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   background: var(--color-B-);
 }
 
-/* Transition box underline go-left */
+/** ---------- tem underline go ---------- */
+/* Transition tem underline go-left */
 #transition_tem_underline__go_left {
   position: relative;
 }
@@ -346,7 +348,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   left: 0;
 }
 
-/* Transition box underline go-right */
+/* Transition tem underline go-right */
 #transition_tem_underline__go_right {
   position: relative;
 }
@@ -370,7 +372,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   right: 0;
 }
 
-/* Animation box underline go-left */
+/* Animation tem underline go-left */
 #animation_tem_underline__go_left {
   position: relative;
   overflow: hidden;
@@ -405,6 +407,424 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   }
 }
 
-/* Animation box underline go-right */
+/* Animation tem underline go-right */
+#animation_tem_underline__go_right {
+  position: relative;
+  overflow: hidden;
+}
+#animation_tem_underline__go_right::before {
+  content                                : "";
+  position                               : absolute;
+  background                             : var(--color-A-);
+  border-radius                          : 100px;
+  width                                  : var(--underline-0--_);
+  height                                 : calc(var(--font-size-) / 8);
+  top                                    : calc(var(--font-size-) + var(--calc-A-));
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#animation_tem_underline__go_right::before {
+  --width-                   : 30%;
+  --height-                  : 0%;
+  animation-name             : underline-go-right;
+  animation-duration         : 1s;
+  animation-timing-function  : linear;
+  animation-delay            : 0s;
+  animation-iteration-count  : 1;
+}
+@keyframes underline-go-right {
+  0% {
+    width: var(--width-);
+    right: calc(var(--width-) * -1);
+  }
+  100% {
+    width: var(--width-);
+    right: 100%;
+  }
+}
 
+/** ---------- tem shadow ---------- */
+/* Transition tem shadow down-right */
+#transition_tem_shadow__down_right {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__down_right {
+  filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
+}
+/* Transition down-right ↘ */
+#transition_tem_shadow__↘ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__↘ {
+  filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow down-left */
+#transition_tem_shadow__down_left {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__down_left {
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
+}
+/* Transition down-left ↙ */
+#transition_tem_shadow__↙ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__↙ {
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow up-right */
+#transition_tem_shadow__up_right {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__up_right {
+  filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+}
+/* Transition up-right ↗ */
+#transition_tem_shadow__↗ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__↗ {
+  filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow up-left */
+#transition_tem_shadow__up_left {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__up_left {
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+}
+/* Transition up-left ↖ */
+#transition_tem_shadow__↖ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__↖ {
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow up */
+#transition_tem_shadow__top {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__top {
+  filter: drop-shadow(0rem calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+}
+/* Transition up ↑ */
+#transition_tem_shadow__↑ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__↑ {
+  filter: drop-shadow(0rem calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow down */
+#transition_tem_shadow__bottom {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__bottom {
+  filter: drop-shadow(0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-));
+}
+/* Transition down ↓ */
+#transition_tem_shadow__↓ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__↓ {
+  filter: drop-shadow(0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow right */
+#transition_tem_shadow__right {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__right {
+  filter: drop-shadow(calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-));
+}
+/* Transition right → */
+#transition_tem_shadow__→ {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__→ {
+  filter: drop-shadow(calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-));
+}
+
+/* Transition tem shadow left */
+#transition_tem_shadow__left {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__left {
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) 0rem var(--shadow-B-) var(--color-B-));
+}
+/* Transition left ← */
+#transition_tem_shadow__← {
+  filter                                 : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#transition_tem_shadow__← {
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) 0rem var(--shadow-B-) var(--color-B-));
+}
+
+/** ---------- box shadow ---------- */
+/* Transition box shadow down-right */
+#transition_box_shadow__down_right {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__down_right:hover {
+  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+}
+/* Transition down-right ↘ */
+#transition_box_shadow__↘ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__↘:hover {
+  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow down-left */
+#transition_box_shadow__down_left {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__down_left:hover {
+  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+}
+/* Transition down-left ↙ */
+#transition_box_shadow__↙ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__↙:hover {
+  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow up-right */
+#transition_box_shadow__up_right {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__up_right:hover {
+  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+}
+/* Transition up-right ↗ */
+#transition_box_shadow__↗ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__↗:hover {
+  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow up-left */
+#transition_box_shadow__up_left {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__up_left:hover {
+  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+}
+/* Transition up-left ↖ */
+#transition_box_shadow__↖ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__↖:hover {
+  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow top */
+#transition_box_shadow__top {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__top:hover {
+  box-shadow: 0rem calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+}
+/* Transition top ↑ */
+#transition_box_shadow__↑ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__↑:hover {
+  box-shadow: 0rem calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow bottom */
+#transition_box_shadow__bottom {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__bottom:hover {
+  box-shadow: 0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-);
+}
+/* Transition bottom ↓ */
+#transition_box_shadow__↓ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__↓:hover {
+  box-shadow: 0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow right */
+#transition_box_shadow__right {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__right:hover {
+  box-shadow: calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-);
+}
+/* Transition right → */
+#transition_box_shadow__→ {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__→:hover {
+  box-shadow: calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-);
+}
+
+/* Transition box shadow left */
+#transition_box_shadow__left {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__left:hover {
+  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) 0rem var(--shadow-B-) var(--color-B-);
+}
+/* Transition left ← */
+#transition_box_shadow__← {
+  box-shadow                             : var(--shadow-A-);
+  transform-origin                       : all;
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_box_shadow__←:hover {
+  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) 0rem var(--shadow-B-) var(--color-B-);
+}
 
