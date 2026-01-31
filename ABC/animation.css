@@ -270,7 +270,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   right                                  : 0;
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -294,7 +293,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   left                                   : 0;                                  
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -319,7 +317,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   right                                  : 0;
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -343,7 +340,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -429,7 +425,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow down-right --- */
 #transition_tem_shadow__down_right {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -442,7 +437,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow down-left --- */
 #transition_tem_shadow__down_left {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -455,7 +449,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow up-right --- */
 #transition_tem_shadow__up_right {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -468,7 +461,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow up-left --- */
 #transition_tem_shadow__up_left {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -481,7 +473,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow up --- */
 #transition_tem_shadow__top {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -494,7 +485,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow down --- */
 #transition_tem_shadow__bottom {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -507,7 +497,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow right --- */
 #transition_tem_shadow__right {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -520,7 +509,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition shadow left --- */
 #transition_tem_shadow__left {
   filter                                 : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -534,43 +522,39 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* Transition shadow down-right */
 #transition_box_shadow__down_right {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
 #transition_box_shadow__down_right:hover {
-  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--plus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow down-left */
 #transition_box_shadow__down_left {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
 #transition_box_shadow__down_left:hover {
-  box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--plus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow up-right */
 #transition_box_shadow__up_right {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
 #transition_box_shadow__up_right:hover {
-  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10 * var(--plus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow up-left */
 #transition_box_shadow__up_left {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -582,7 +566,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* Transition shadow top */
 #transition_box_shadow__top {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
@@ -594,31 +577,28 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* Transition shadow bottom */
 #transition_box_shadow__bottom {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
 #transition_box_shadow__bottom:hover {
-  box-shadow: 0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-);
+  box-shadow: 0rem calc(var(--font-size-) / 10 * var(--plus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow right */
 #transition_box_shadow__right {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
 #transition_box_shadow__right:hover {
-  box-shadow: calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10 * var(--plus-)) 0rem var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow left */
 #transition_box_shadow__left {
   box-shadow                             : var(--shadow-A-);
-  transform-origin                       : all;
   transition-duration                    : var(--duration-);
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
