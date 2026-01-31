@@ -64,9 +64,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle-up--right   : polygon(20% 0, 100% 0, 90% 100%, 10% 100%);
 }
 /* --- Animation wiggle up --- */
+#animation_box_wiggle__↑,
 #animation_box_wiggle__up {
   clip-path: var(--wiggle-up-);
 }
+#animation_box_wiggle__↑:hover,
 #animation_box_wiggle__up:hover {
   animation-name             : wiggle-up;
   animation-duration         : 0.3s;
@@ -81,17 +83,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   75% {clip-path: var(--wiggle-up--right);}
   100% {clip-path: var(--wiggle-up-);}
 }
-/* Animation up ↑ */
-#animation_box_wiggle__↑ {
-  clip-path: var(--wiggle-up-);
-}
-#animation_box_wiggle__↑:hover {
-  animation-name             : wiggle-up;
-  animation-duration         : 0.3s;
-  animation-timing-function  : linear;
-  animation-delay            : 0s;
-  animation-iteration-count  : 1;
-}
 
 /** ---------- wiggle down ---------- */
 :root { /* --- var wiggle down --- */
@@ -100,9 +91,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle-down--right   : polygon(10% 0, 90% 0, 80% 100%, 0% 100%);
 }
 /* --- Animation wiggle down --- */
+#animation_box_wiggle__↓,
 #animation_box_wiggle__down {
   clip-path: var(--wiggle-down-);
 }
+#animation_box_wiggle__↓:hover,
 #animation_box_wiggle__down:hover {
   animation-name             : wiggle-down;
   animation-duration         : 0.3s;
@@ -117,37 +110,18 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   75% {clip-path: var(--wiggle-down--right);}
   100% {clip-path: var(--wiggle-down-);}
 }
-/* Animation down ↓ */
-#animation_box_wiggle__↓ {
-  clip-path: var(--wiggle-down-);
-}
-#animation_box_wiggle__↓:hover {
-  animation-name             : wiggle-down;
-  animation-duration         : 0.3s;
-  animation-timing-function  : linear;
-  animation-delay            : 0s;
-  animation-iteration-count  : 1;
-}
 
 /** ---------- wiggle ---------- */
 /* --- Transition wiggle left --- */
+#transition_box_wiggle__←,
 #transition_box_wiggle__left {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#transition_box_wiggle__←:hover,
 #transition_box_wiggle__left:hover {
-  clip-path: var(--wiggle--left);
-}
-/* Transition left ← */
-#transition_box_wiggle__← {
-  clip-path                  : var(--wiggle-);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
-}
-#transition_box_wiggle__←:hover {
   clip-path: var(--wiggle--left);
 }
 
