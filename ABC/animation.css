@@ -64,11 +64,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle-up--right   : polygon(20% 0, 100% 0, 90% 100%, 10% 100%);
 }
 /* --- Animation wiggle up --- */
-#animation_box_wiggle__↑,
 #animation_box_wiggle__up {
   clip-path: var(--wiggle-up);
 }
-#animation_box_wiggle__↑:hover,
 #animation_box_wiggle__up:hover {
   animation-name             : wiggle-up;
   animation-duration         : 0.3s;
@@ -91,11 +89,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle-down--right   : polygon(10% 0, 90% 0, 80% 100%, 0% 100%);
 }
 /* --- Animation wiggle down --- */
-#animation_box_wiggle__↓,
 #animation_box_wiggle__down {
   clip-path: var(--wiggle-down);
 }
-#animation_box_wiggle__↓:hover,
 #animation_box_wiggle__down:hover {
   animation-name             : wiggle-down;
   animation-duration         : 0.3s;
@@ -113,79 +109,67 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /** ---------- wiggle ---------- */
 /* --- Transition wiggle left --- */
-#transition_box_wiggle__←,
 #transition_box_wiggle__left {
   clip-path                  : var(--wiggle);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
-#transition_box_wiggle__←:hover,
 #transition_box_wiggle__left:hover {
   clip-path: var(--wiggle--left);
 }
 
 /* --- Transition wiggle right --- */
-#transition_box_wiggle__→,
 #transition_box_wiggle__right {
   clip-path                  : var(--wiggle);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
-#transition_box_wiggle__→:hover,
 #transition_box_wiggle__right:hover {
   clip-path: var(--wiggle--right);
 }
 
 /* --- Transition wiggle up-left --- */
-#transition_box_wiggle__↖,
 #transition_box_wiggle__up_left {
   clip-path                  : var(--wiggle);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
-#transition_box_wiggle__↖:hover,
 #transition_box_wiggle__up_left:hover {
   clip-path: var(--wiggle-up--left);
 }
 
 /* --- Transition wiggle up-right --- */
-#transition_box_wiggle__↗,
 #transition_box_wiggle__up_right {
   clip-path                  : var(--wiggle);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
-#transition_box_wiggle__↗:hover,
 #transition_box_wiggle__up_right:hover {
   clip-path: var(--wiggle-up--right);
 }
 
 /* --- Transition wiggle down-left --- */
-#transition_box_wiggle__↙,
 #transition_box_wiggle__down_left {
   clip-path                  : var(--wiggle);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
-#transition_box_wiggle__↙:hover,
 #transition_box_wiggle__down_left:hover {
   clip-path: var(--wiggle-down--right);
 }
 
 /* --- Transition wiggle down-right --- */
-#transition_box_wiggle__↘,
 #transition_box_wiggle__down_right {
   clip-path                  : var(--wiggle);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
-#transition_box_wiggle__↘:hover,
 #transition_box_wiggle__down_right:hover {
   clip-path: var(--wiggle-down--left);
 }
@@ -273,25 +257,16 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 }
 
 /** ---------- tem underline ---------- */
-:root { /* --- var underline --- */
-  /* underline */
-  --underline-0--_: 0%;
-  --underline-100--_: 100%;
-  --underline-0--px: 0%;
-  --underline-100--px: 100%;
-}
 /* --- Transition underline left --- */
-#transition_tem_underline__←, 
 #transition_tem_underline__left {
   position: relative;
 }
-#transition_tem_underline__←::after, 
 #transition_tem_underline__left::after {
   content                                : "";
   position                               : absolute;
   background                             : var(--background-color-A-);
   border-radius                          : 100px;
-  width                                  : var(--underline-0--_);
+  width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   right                                  : 0;
@@ -301,24 +276,21 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_underline__←::after, 
-#transition_tem_underline__left::after {
-  width: var(--underline-100--_);
+#transition_tem_underline__left:hover::after {
+  width: var(--max-width-, 100%);
   background: var(--color-B-);
 }
 
 /* --- Transition underline right --- */
-#transition_tem_underline__→,
 #transition_tem_underline__right {
   position: relative;
 }
-#transition_tem_underline__→::after,
 #transition_tem_underline__right::after {
   content                                : "";
   position                               : absolute;
   background                             : var(--color-A-);
   border-radius                          : 100px;
-  width                                  : var(--underline-0--_);
+  width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   left                                   : 0;                                  
@@ -328,9 +300,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_underline__→::after,
-#transition_tem_underline__right::after {
-  width: var(--underline-100--_);
+#transition_tem_underline__right:hover::after {
+  width: var(--max-width-, 100%);
   background: var(--color-B-);
 }
 
@@ -344,7 +315,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   position                               : absolute;
   background                             : var(--color-A-);
   border-radius                          : 100px;
-  width                                  : var(--underline-0--_);
+  width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   right                                  : 0;
@@ -354,8 +325,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_underline__go_left::before {
-  width: var(--underline-100--_);
+#transition_tem_underline__go_left:hover::before {
+  width: var(--max-width-, 100%);
   background: var(--color-B-);
   left: 0;
 }
@@ -369,7 +340,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   position                               : absolute;
   background                             : var(--color-A-);
   border-radius                          : 100px;
-  width                                  : var(--underline-0--_);
+  width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   transform-origin                       : all;
@@ -378,8 +349,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_underline__go_right::before {
-  width: var(--underline-100--_);
+#transition_tem_underline__go_right:hover::before {
+  width: var(--max-width-, 100%);
   background: var(--color-B-);
   right: 0;
 }
@@ -394,12 +365,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   position                               : absolute;
   background                             : var(--color-A-);
   border-radius                          : 100px;
-  width                                  : var(--underline-0--_);
+  width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#animation_tem_underline__go_left::before {
+#animation_tem_underline__go_left:hover::before {
   --width-                   : 30%;
   --height-                  : 0%;
   animation-name             : underline-go-left;
@@ -429,12 +400,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   position                               : absolute;
   background                             : var(--color-A-);
   border-radius                          : 100px;
-  width                                  : var(--underline-0--_);
+  width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#animation_tem_underline__go_right::before {
+#animation_tem_underline__go_right:hover::before {
   --width-                   : 30%;
   --height-                  : 0%;
   animation-name             : underline-go-right;
@@ -456,7 +427,6 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /** ---------- tem shadow ---------- */
 /* --- Transition shadow down-right --- */
-#transition_tem_shadow__↘,
 #transition_tem_shadow__down_right {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -465,13 +435,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__↘
-#transition_tem_shadow__down_right {
+#transition_tem_shadow__down_right:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow down-left --- */
-#transition_tem_shadow__↙,
 #transition_tem_shadow__down_left {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -480,13 +448,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__↙,
-#transition_tem_shadow__down_left {
+#transition_tem_shadow__down_left:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow up-right --- */
-#transition_tem_shadow__↗,
 #transition_tem_shadow__up_right {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -495,13 +461,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__↗,
-#transition_tem_shadow__up_right {
+#transition_tem_shadow__up_right:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow up-left --- */
-#transition_tem_shadow__↖,
 #transition_tem_shadow__up_left {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -510,13 +474,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__↖,
-#transition_tem_shadow__up_left {
+#transition_tem_shadow__up_left:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow up --- */
-#transition_tem_shadow__↑,
 #transition_tem_shadow__top {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -525,13 +487,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__↑,
-#transition_tem_shadow__top {
+#transition_tem_shadow__top:hover {
   filter: drop-shadow(0rem calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow down --- */
-#transition_tem_shadow__↓,
 #transition_tem_shadow__bottom {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -540,13 +500,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__↓,
-#transition_tem_shadow__bottom {
+#transition_tem_shadow__bottom:hover {
   filter: drop-shadow(0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow right --- */
-#transition_tem_shadow__→,
 #transition_tem_shadow__right {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -555,13 +513,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__→,
-#transition_tem_shadow__right {
+#transition_tem_shadow__right:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow left --- */
-#transition_tem_shadow__←,
 #transition_tem_shadow__left {
   filter                                 : var(--shadow-A-);
   transform-origin                       : all;
@@ -570,14 +526,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_shadow__←,
-#transition_tem_shadow__left {
+#transition_tem_shadow__left:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) 0rem var(--shadow-B-) var(--color-B-));
 }
 
 /** ---------- box shadow ---------- */
 /* Transition shadow down-right */
-#transition_box_shadow__↘,
 #transition_box_shadow__down_right {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -585,13 +539,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__↘:hover,
 #transition_box_shadow__down_right:hover {
   box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow down-left */
-#transition_box_shadow__↙,
 #transition_box_shadow__down_left {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -599,13 +551,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__↙:hover,
 #transition_box_shadow__down_left:hover {
   box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow up-right */
-#transition_box_shadow__↗,
 #transition_box_shadow__up_right {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -613,13 +563,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__↗:hover,
 #transition_box_shadow__up_right:hover {
   box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow up-left */
-#transition_box_shadow__↖,
 #transition_box_shadow__up_left {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -627,13 +575,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__↖:hover,
 #transition_box_shadow__up_left:hover {
   box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow top */
-#transition_box_shadow__↑,
 #transition_box_shadow__top {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -641,13 +587,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__↑:hover,
 #transition_box_shadow__top:hover {
   box-shadow: 0rem calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow bottom */
-#transition_box_shadow__↓,
 #transition_box_shadow__bottom {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -655,13 +599,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__↓:hover,
 #transition_box_shadow__bottom:hover {
   box-shadow: 0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow right */
-#transition_box_shadow__→,
 #transition_box_shadow__right {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -669,13 +611,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__→:hover,
 #transition_box_shadow__right:hover {
   box-shadow: calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow left */
-#transition_box_shadow__←,
 #transition_box_shadow__left {
   box-shadow                             : var(--shadow-A-);
   transform-origin                       : all;
@@ -683,7 +623,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
-#transition_box_shadow__←:hover,
 #transition_box_shadow__left:hover {
   box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) 0rem var(--shadow-B-) var(--color-B-);
 }
+
