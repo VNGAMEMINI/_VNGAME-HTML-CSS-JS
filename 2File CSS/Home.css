@@ -64,7 +64,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
     --shadow-A-            : 0rem 0rem 0rem #000000;
     --shadow-B             : 0rem 0rem 0rem #000000;
     --shadow-              : none;
-    --±1-                  : -1;
+    --minus-               : -1;
+    --positive-            : +1
 }
 
 div {

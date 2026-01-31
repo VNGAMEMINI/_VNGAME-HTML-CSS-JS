@@ -38,9 +38,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle--right   : polygon(20% 0, 100% 0, 80% 100%, 0 100%);
 }
 /* --- Animation wiggle --- */
+#an_b_wiggle,
 #animation_box_wiggle {
   clip-path: var(--wiggle-);
 }
+#an_b_wiggle:hover,
 #animation_box_wiggle:hover {
   animation-name             : wiggle;
   animation-duration         : 0.3s;
@@ -64,10 +66,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle-up--right   : polygon(20% 0, 100% 0, 90% 100%, 10% 100%);
 }
 /* --- Animation wiggle up --- */
+#an_b_wiggle__u,
 #animation_box_wiggle__↑,
 #animation_box_wiggle__up {
   clip-path: var(--wiggle-up-);
 }
+#an_b_wiggle__u:hover,
 #animation_box_wiggle__↑:hover,
 #animation_box_wiggle__up:hover {
   animation-name             : wiggle-up;
@@ -91,10 +95,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --wiggle-down--right   : polygon(10% 0, 90% 0, 80% 100%, 0% 100%);
 }
 /* --- Animation wiggle down --- */
+#an_b_wiggle__d,
 #animation_box_wiggle__↓,
 #animation_box_wiggle__down {
   clip-path: var(--wiggle-down-);
 }
+#an_b_wiggle__d:hover,
 #animation_box_wiggle__↓:hover,
 #animation_box_wiggle__down:hover {
   animation-name             : wiggle-down;
@@ -113,6 +119,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /** ---------- wiggle ---------- */
 /* --- Transition wiggle left --- */
+#tr_b_wiggle__l,
 #transition_box_wiggle__←,
 #transition_box_wiggle__left {
   clip-path                  : var(--wiggle-);
@@ -120,113 +127,84 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_wiggle__l:hover,
 #transition_box_wiggle__←:hover,
 #transition_box_wiggle__left:hover {
   clip-path: var(--wiggle--left);
 }
 
 /* --- Transition wiggle right --- */
+#tr_b_wiggle__r,
+#transition_box_wiggle__→,
 #transition_box_wiggle__right {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_wiggle__r:hover,
+#transition_box_wiggle__→:hover,
 #transition_box_wiggle__right:hover {
-  clip-path: var(--wiggle--right);
-}
-/* Transition right → */
-#transition_box_wiggle__→ {
-  clip-path                  : var(--wiggle-);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
-}
-#transition_box_wiggle__→:hover {
   clip-path: var(--wiggle--right);
 }
 
 /* --- Transition wiggle up-left --- */
+#tr_b_wiggle__u_l,
+#transition_box_wiggle__↖,
 #transition_box_wiggle__up_left {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_wiggle__u_l:hover,
+#transition_box_wiggle__↖:hover,
 #transition_box_wiggle__up_left:hover {
-  clip-path: var(--wiggle-up--left);
-}
-/* Transition up-left ↖ */
-#transition_box_wiggle__↖ {
-  clip-path                  : var(--wiggle-);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
-}
-#transition_box_wiggle__↖:hover {
   clip-path: var(--wiggle-up--left);
 }
 
 /* --- Transition wiggle up-right --- */
+#tr_b_wiggle__u_r,
+#transition_box_wiggle__↗,
 #transition_box_wiggle__up_right {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_wiggle__u_r:hover,
+#transition_box_wiggle__↗:hover,
 #transition_box_wiggle__up_right:hover {
-  clip-path: var(--wiggle-up--right);
-}
-/* Transition up-right ↗ */
-#transition_box_wiggle__↗ {
-  clip-path                  : var(--wiggle-);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
-}
-#transition_box_wiggle__↗:hover {
   clip-path: var(--wiggle-up--right);
 }
 
 /* --- Transition wiggle down-left --- */
+#tr_b_wiggle__d_l,
+#transition_box_wiggle__↙,
 #transition_box_wiggle__down_left {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_wiggle__d_l:hover,
+#transition_box_wiggle__↙:hover,
 #transition_box_wiggle__down_left:hover {
-  clip-path: var(--wiggle-down--right);
-}
-/* Transition down-right ↙ */
-#transition_box_wiggle__↙ {
-  clip-path                  : var(--wiggle-);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
-}
-#transition_box_wiggle__↙:hover {
   clip-path: var(--wiggle-down--right);
 }
 
 /* --- Transition wiggle down-right --- */
+#tr_b_wiggle__d_r,
+#transition_box_wiggle__↘,
 #transition_box_wiggle__down_right {
   clip-path                  : var(--wiggle-);
   transition-duration        : 0.3s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_wiggle__d_r:hover,
+#transition_box_wiggle__↘:hover,
 #transition_box_wiggle__down_right:hover {
-  clip-path: var(--wiggle-down--left);
-}
-/* Transition down-right ↘ */
-#transition_box_wiggle__↘ {
-  clip-path                  : var(--wiggle-);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
-}
-#transition_box_wiggle__↘:hover {
   clip-path: var(--wiggle-down--left);
 }
 
@@ -257,26 +235,30 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --corners-B--px--down-left   : 0px 0px 0px 10px;
 }
 /* --- Animation corners px --- */
+#an_b_corners__p,
 #animation_box_corners__px {
   border-radius: 0px;
 }
+#an_b_corners__p:hover,
 #animation_box_corners__px:hover {
-  animation-name             : corners;
+  animation-name             : corners-px;
   animation-duration         : 0.5s;
   animation-timing-function  : linear;
   animation-delay            : 0s;
   animation-iteration-count  : 1;
 }
-@keyframes corners {
+@keyframes corners-px {
   0% {border-radius: var(--corners-A--px);}
   50% {border-radius: calc(var(--corners-B--px) + 0.5vw);}
   100% {border-radius: var(--corners-A--px);}
 }
 
 /* --- Animation corners % --- */
+#an_b_corners___,
 #animation_box_corners___ {
   border-radius: 0%;
 }
+#an_b_corners___:hover,
 #animation_box_corners___:hover {
   animation-name             : corners;
   animation-duration         : 0.5s;
@@ -284,30 +266,34 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   animation-delay            : 0s;
   animation-iteration-count  : 1;
 }
-@keyframes corners {
+@keyframes corners-_ {
   0% {border-radius: var(--corners-A--_);}
   50% {border-radius: calc(var(--corners-B--_) + 1vw);}
   100% {border-radius: var(--corners-A--_);}
 }
 
 /* --- Transition corners % --- */
+#tr_b_corners___,
 #transition_box_corners___ {
   border-radius              : var(--corners-A--_);
   transition-duration        : 0.5s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_corners___:hover,
 #transition_box_corners___:hover {
   border-radius: calc(var(--corners-B--_) + 1vw);
 }
 
 /* --- Transition corners px --- */
+#tr_b_corners__p,
 #transition_box_corners__px {
   border-radius              : var(--corners-A--px);
   transition-duration        : 0.5s;
   transition-timing-function : linear;
   transition-delay           : 0s;
 }
+#tr_b_corners__p:hover,
 #transition_box_corners__px:hover {
   border-radius: calc(var(--corners-B--px) + 0.5vw);
 }
@@ -321,10 +307,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   --underline-100--px: 100%;
 }
 /* --- Transition underline left --- */
+#tr_t_underline__l,
 #transition_tem_underline__←, 
 #transition_tem_underline__left {
   position: relative;
 }
+#tr_t_underline__l::after,
 #transition_tem_underline__←::after, 
 #transition_tem_underline__left::after {
   content                                : "";
@@ -341,6 +329,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_underline__l::after,
 #transition_tem_underline__←::after, 
 #transition_tem_underline__left::after {
   width: var(--underline-100--_);
@@ -348,10 +337,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 }
 
 /* --- Transition underline right --- */
+#tr_t_underline__r,
 #transition_tem_underline__→,
 #transition_tem_underline__right {
   position: relative;
 }
+#tr_t_underline__r::after,
 #transition_tem_underline__→::after,
 #transition_tem_underline__right::after {
   content                                : "";
@@ -368,6 +359,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_underline__r::after,
 #transition_tem_underline__→::after,
 #transition_tem_underline__right::after {
   width: var(--underline-100--_);
@@ -376,9 +368,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /** ---------- tem underline go ---------- */
 /* --- Transition underline go-left --- */
+#tr_t_underline__g_l,
 #transition_tem_underline__go_left {
   position: relative;
 }
+#tr_t_underline__g_l::before,
 #transition_tem_underline__go_left::before {
   content                                : "";
   position                               : absolute;
@@ -394,6 +388,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_underline__g_l::before,
 #transition_tem_underline__go_left::before {
   width: var(--underline-100--_);
   background: var(--color-B-);
@@ -401,9 +396,11 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 }
 
 /* --- Transition underline go-right --- */
+#tr_t_underline__g_r,
 #transition_tem_underline__go_right {
   position: relative;
 }
+#tr_t_underline__g_r::before,
 #transition_tem_underline__go_right::before {
   content                                : "";
   position                               : absolute;
@@ -418,6 +415,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_underline__g_r::before,
 #transition_tem_underline__go_right::before {
   width: var(--underline-100--_);
   background: var(--color-B-);
@@ -425,10 +423,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 }
 
 /* --- Animation underline go-left --- */
+#an_t_underline__g_l,
 #animation_tem_underline__go_left {
   position: relative;
   overflow: hidden;
 }
+#an_t_underline__g_l::before,
 #animation_tem_underline__go_left::before {
   content                                : "";
   position                               : absolute;
@@ -439,6 +439,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   top                                    : calc(var(--font-size-) + var(--calc-A-));
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_underline__g_l::before,
 #animation_tem_underline__go_left::before {
   --width-                   : 30%;
   --height-                  : 0%;
@@ -460,10 +461,12 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 }
 
 /* --- Animation underline go-right --- */
+#tr_t_underline__g_r,
 #animation_tem_underline__go_right {
   position: relative;
   overflow: hidden;
 }
+#tr_t_underline__g_r::before,
 #animation_tem_underline__go_right::before {
   content                                : "";
   position                               : absolute;
@@ -474,6 +477,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   top                                    : calc(var(--font-size-) + var(--calc-A-));
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_underline__g_r::before,
 #animation_tem_underline__go_right::before {
   --width-                   : 30%;
   --height-                  : 0%;
@@ -496,6 +500,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /** ---------- tem shadow ---------- */
 /* --- Transition shadow down-right --- */
+#tr_t_shadow__d_r,
 #transition_tem_shadow__↘,
 #transition_tem_shadow__down_right {
   filter                                 : var(--shadow-A-);
@@ -505,12 +510,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__d_r,
 #transition_tem_shadow__↘
 #transition_tem_shadow__down_right {
   filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow down-left --- */
+#tr_t_shadow__d_l,
 #transition_tem_shadow__↙,
 #transition_tem_shadow__down_left {
   filter                                 : var(--shadow-A-);
@@ -520,12 +527,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__d_l,
 #transition_tem_shadow__↙,
 #transition_tem_shadow__down_left {
-  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow up-right --- */
+#tr_t_shadow__u_r,
 #transition_tem_shadow__↗,
 #transition_tem_shadow__up_right {
   filter                                 : var(--shadow-A-);
@@ -535,12 +544,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__u_r,
 #transition_tem_shadow__↗,
 #transition_tem_shadow__up_right {
-  filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+  filter: drop-shadow(calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow up-left --- */
+#tr_t_shadow__u_l,
 #transition_tem_shadow__↖,
 #transition_tem_shadow__up_left {
   filter                                 : var(--shadow-A-);
@@ -550,12 +561,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__u_l,
 #transition_tem_shadow__↖,
 #transition_tem_shadow__up_left {
-  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow up --- */
+#tr_t_shadow__t,
 #transition_tem_shadow__↑,
 #transition_tem_shadow__top {
   filter                                 : var(--shadow-A-);
@@ -565,12 +578,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__t,
 #transition_tem_shadow__↑,
 #transition_tem_shadow__top {
-  filter: drop-shadow(0rem calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-));
+  filter: drop-shadow(0rem calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow down --- */
+#tr_t_shadow__b,
 #transition_tem_shadow__↓,
 #transition_tem_shadow__bottom {
   filter                                 : var(--shadow-A-);
@@ -580,12 +595,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__b,
 #transition_tem_shadow__↓,
 #transition_tem_shadow__bottom {
   filter: drop-shadow(0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow right --- */
+#tr_t_shadow__r,
 #transition_tem_shadow__→,
 #transition_tem_shadow__right {
   filter                                 : var(--shadow-A-);
@@ -595,12 +612,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__r,
 #transition_tem_shadow__→,
 #transition_tem_shadow__right {
   filter: drop-shadow(calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-));
 }
 
 /* --- Transition shadow left --- */
+#tr_t_shadow__l,
 #transition_tem_shadow__←,
 #transition_tem_shadow__left {
   filter                                 : var(--shadow-A-);
@@ -610,13 +629,15 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-delay                       : var(--delay-);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
+#tr_t_shadow__l,
 #transition_tem_shadow__←,
 #transition_tem_shadow__left {
-  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--±1-)) 0rem var(--shadow-B-) var(--color-B-));
+  filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) 0rem var(--shadow-B-) var(--color-B-));
 }
 
 /** ---------- box shadow ---------- */
 /* Transition shadow down-right */
+#tr_b_shadow__d_r,
 #transition_box_shadow__↘,
 #transition_box_shadow__down_right {
   box-shadow                             : var(--shadow-A-);
@@ -625,12 +646,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__d_r:hover,
 #transition_box_shadow__↘:hover,
 #transition_box_shadow__down_right:hover {
   box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow down-left */
+#tr_b_shadow__d_l,
 #transition_box_shadow__↙,
 #transition_box_shadow__down_left {
   box-shadow                             : var(--shadow-A-);
@@ -639,12 +662,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__d_l:hover,
 #transition_box_shadow__↙:hover,
 #transition_box_shadow__down_left:hover {
-  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow up-right */
+#tr_b_shadow__u_r,
 #transition_box_shadow__↗,
 #transition_box_shadow__up_right {
   box-shadow                             : var(--shadow-A-);
@@ -653,12 +678,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__u_r:hover,
 #transition_box_shadow__↗:hover,
 #transition_box_shadow__up_right:hover {
-  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow up-left */
+#tr_b_shadow__u_l,
 #transition_box_shadow__↖,
 #transition_box_shadow__up_left {
   box-shadow                             : var(--shadow-A-);
@@ -667,12 +694,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__u_l:hover,
 #transition_box_shadow__↖:hover,
 #transition_box_shadow__up_left:hover {
-  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow top */
+#tr_b_shadow__t,
 #transition_box_shadow__↑,
 #transition_box_shadow__top {
   box-shadow                             : var(--shadow-A-);
@@ -681,12 +710,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__t:hover,
 #transition_box_shadow__↑:hover,
 #transition_box_shadow__top:hover {
-  box-shadow: 0rem calc(var(--font-size-) / 10 * var(--±1-)) var(--shadow-B-) var(--color-B-);
+  box-shadow: 0rem calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow bottom */
+#tr_b_shadow__b,
 #transition_box_shadow__↓,
 #transition_box_shadow__bottom {
   box-shadow                             : var(--shadow-A-);
@@ -695,12 +726,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__b:hover,
 #transition_box_shadow__↓:hover,
 #transition_box_shadow__bottom:hover {
   box-shadow: 0rem calc(var(--font-size-) / 10 ) var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow right */
+#tr_b_shadow__r,
 #transition_box_shadow__→,
 #transition_box_shadow__right {
   box-shadow                             : var(--shadow-A-);
@@ -709,12 +742,14 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__r:hover,
 #transition_box_shadow__→:hover,
 #transition_box_shadow__right:hover {
   box-shadow: calc(var(--font-size-) / 10) 0rem var(--shadow-B-) var(--color-B-);
 }
 
 /* Transition shadow left */
+#tr_b_shadow__l,
 #transition_box_shadow__←,
 #transition_box_shadow__left {
   box-shadow                             : var(--shadow-A-);
@@ -723,7 +758,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-timing-function             : var(--timing-function-);
   transition-delay                       : var(--delay-);
 }
+#tr_b_shadow__l:hover,
 #transition_box_shadow__←:hover,
 #transition_box_shadow__left:hover {
-  box-shadow: calc(var(--font-size-) / 10 * var(--±1-)) 0rem var(--shadow-B-) var(--color-B-);
+  box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) 0rem var(--shadow-B-) var(--color-B-);
 }
