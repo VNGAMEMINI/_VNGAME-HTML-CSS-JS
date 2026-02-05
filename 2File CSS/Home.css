@@ -38,64 +38,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 | `h6` | 0.67rem (≈ 10.72px) | 
 -------------------------- */
 
-:root { /* --- reset --- */
-    --font-size-           : 0rem;
-    --min-font-size-       : 0px;
-    --max-font-size-       : 0px;
-    --width-               : 0px;
-    --min-width-           : 0%;
-    --max-width-           : 100%;
-    --height-              : 0px;
-    --delay-               : 0s;
-    --duration-            : 1s;
-    --iteration-count-     : 1;
-    --timing-function-     : ease;
-    --color-A-             : #000000;
-    --color-B-             : none;
-    --color-               : none;
-    --border-radius-       : 0px;
-    --margin-              : 0px;
-    --padding-             : 0px;
-    --calc-A-              : 0px;
-    --calc-B-              : 0px;
-    --calc-                : 0px;
-    --shadow-A-            : 0rem 0rem 0rem #000000;
-    --shadow-B             : 0rem 0rem 0rem #000000;
-    --shadow-              : none;
-    --minus-               : -1;
-    --plus-                : 1
-}
 
-div {
-    /* root */
-    --color-B-: #ff0000;
-    --shadow-B-: 0.1rem;
-    --font-size-: 3rem;
-    --width-: 15vw;
-    --height-: 10px;
-    --corners-B--px: calc(var(--width-) / 10);
-    --color-B-: #ff0000;
-    /* var */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-);
-    margin: var(--margin-);
-    padding: var(--padding-);
-    border-radius: var(--border-radius-);
-    font-size: var(--font-size-);
-    width: max(var(--width-), var(--font-size-)); height: min(var(--height-), var(--font-size-));
-    min-width: calc(var(--font-size-) * 3);
-    min-height: calc(var(--font-size-) * 1.5);
-}
-.tem {
-    /* root */
-    --color-B-: #ff0000;
-    --shadow-B-: 0.1rem;
-    /* var */
-    font-size: var(--font-size-);
-    color: rgb(var(--color-rgb--back, 0, 0, 0));
-}
 
 /* Mobile */
 @media (max-width: 480px) {

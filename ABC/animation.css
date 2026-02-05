@@ -31,9 +31,1327 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   transition-property        : property;
 -------------------------- */
 
+/** -------------------------- Animation Transition id -------------------------- */
+/*
+#animation_transition__input__checked,
+#animation_transition__input__disabled,
+#animation_transition__input__focus_visible,
+#animation_transition__input__focus_within,
+#animation_transition__input__focus,
+#animation_transition__a__target,
+#animation_transition__a__any-link:any-link,
+#animation_transition__x_y__active,
+#animation_transition__x_y__hover {
+  position                               : var(--position-A-, relative);
+  overflow                               : var(--overflow-A-, hidden);
+  background                             : var(--background-A-, var(--color-A-, #000));
+  background-size                        : var(--bg-size-A-, auto);
+  background-position                    : var(--bg-position-A-, center);
+  background-repeat                      : var(--bg-repeat-A-, no-repeat);
+  background-clip                        : var(--bg-clip-A-, border-box);
+  color                                  : var(--color-A-, var(--background-A-, #fff));
+  width                                  : var(--width-A-, var(--max-width-, auto));
+  height                                 : var(--height-A-, var(--max-height-, auto));
+  filter                                 : var(--filter-A-, none);
+  box-shadow                             : var(--shadow-A-, none);
+  border-radius                          : var(--border-radius-A-, none);
+  font-size                              : var(--font-size-A-);
+  text-shadow                            : var(--text-shadow-A-, none);
+  letter-spacing                         : var(--letter-spacing-A-, normal);
+  word-spacing                           : var(--word-spacing-A-, normal);
+  line-height                            : var(--line-height-A-, normal);
+  text-decoration                        : var(--text-decoration-A-, none);
+  cursor                                 : var(--cursor-A-, auto);
+  pointer-events                         : var(--pointer-A-, auto);
+  user-select                            : var(--user-select-A-, auto);
+  top                                    : var(--top-A-, auto);
+  left                                   : var(--left-A-, auto);
+  right                                  : var(--right-A-, auto);
+  bottom                                 : var(--bottom-A-, auto);
+  z-index                                : var(--z-index-A-, auto);
+  display                                : var(--display-A-, block);
+  flex                                   : var(--flex-A-, none);
+  align-self                             : var(--align-self-A-, auto);
+  border                                 : var(--border-A-, none);
+  border-width                           : var(--border-width-A-, 0);
+  border-style                           : var(--border-style-A-, solid);
+  border-color                           : var(--border-color-A-, currentColor);
+  outline                                : var(--outline-A-, none);
+  outline-offset                         : var(--outline-offset-A-, 0);
+  transform                              : var(--transform-A-, none);
+  transform-origin                       : var(--transform-origin-A-, center);
+  transition-duration                  : var(--transition-duration-, 0.3s);
+  transition-timing-function           : var(--transition-timing-function-, linear);
+  transition-delay                     : var(--transition-delay-, 0s);
+}
+.animation--transition:checked         #animation_transition__input__checked,           #animation_transition__input__checked:checked,
+.animation--transition:disabled        #animation_transition__input__disabled,          #animation_transition__input__disabled:disabled,
+.animation--transition:focus-visible   #animation_transition__input__focus_visible,     #animation_transition__input__focus_visible:focus-visible,
+.animation--transition:focus-within    #animation_transition__input__focus_within,      #animation_transition__input__focus_within:focus-within,
+.animation--transition:focus           #animation_transition__input__focus,             #animation_transition__input:focus,
+.animation--transition:target          #animation_transition__a__target,                        #animation_transition__a__target:target,
+.animation--transition:any-link:hover  #animation_transition__a__any_link,              #animation_transition__a:any-link:hover,
+.animation--transition:active          #animation_transition__x_y__active,              #animation_transition__x_y__active:active,
+.animation--transition:hover           #animation_transition__x_y__hover,               #animation_transition__x_y__hover:hover {
+  position                               : var(--position-B-, relative);
+  overflow                               : var(--overflow-B-, hidden);
+  background                             : var(--background-B-, var(--color-B-, #000));
+  background-size                        : var(--bg-size-B-, auto);
+  background-position                    : var(--bg-position-B-, center);
+  background-repeat                      : var(--bg-repeat-B-, no-repeat);
+  background-clip                        : var(--bg-clip-B-, border-box);
+  color                                  : var(--color-B-, var(--background-B-, #fff));
+  width                                  : var(--width-B-, var(--max-width-, auto));
+  height                                 : var(--height-B-, var(--max-height-, auto));
+  filter                                 : var(--filter-B-, none);
+  box-shadow                             : var(--shadow-B-, none);
+  border-radius                          : var(--radius-B-, none);
+  font-size                              : var(--font-size-B-);
+  text-shadow                            : var(--text-shadow-B-, none);
+  letter-spacing                         : var(--letter-spacing-B-, normal);
+  word-spacing                           : var(--word-spacing-B-, normal);
+  line-height                            : var(--line-height-B-, normal);
+  text-decoration                        : var(--text-decoration-B-, none);
+  cursor                                 : var(--cursor-B-, auto);
+  pointer-events                         : var(--pointer-B-, auto);
+  user-select                            : var(--user-select-B-, auto);
+  top                                    : var(--top-B-, auto);
+  left                                   : var(--left-B-, auto);
+  right                                  : var(--right-B-, auto);
+  bottom                                 : var(--bottom-B-, auto);
+  z-index                                : var(--z-index-B-, auto);
+  display                                : var(--display-B-, block);
+  flex                                   : var(--flex-B-, none);
+  align-self                             : var(--align-self-B-, auto);
+  border                                 : var(--border-B-, none);
+  border-width                           : var(--border-width-B-, 0);
+  border-style                           : var(--border-style-B-, solid);
+  border-color                           : var(--border-color-B-, currentColor);
+  outline                                : var(--outline-B-, none);
+  outline-offset                         : var(--outline-offset-B-, 0);
+  transform                              : var(--transform-B-, none);
+  transform-origin                       : var(--transform-origin-B-, center);
+  opacity                                : var(--opacity-B-, 1);
+  visibility                             : var(--visibility-B-, visible);
+  animation-name                       : var(--animation-name-A, animation);
+  animation-duration                   : var(--animation-duration-A, 0.3s);
+  animation-timing-function            : var(--animation-timing-function-A, linear);
+  animation-delay                      : var(--animation-delay-A, 0s);
+  animation-iteration-count            : var(--animation-iteration-count-A, 1);
+  animation-direction                  : var(--animation-direction-A, normal);
+  animation-fill-mode                  : var(--animation-fill-mode-A, both);
+  animation-play-state                 : var(--animation-play-state-B-, running);
+} 
+#animation_transition__x_y__active::after,
+#animation_transition__x_y__hover::after {
+  content                                : "";
+  overflow                               : var(--overflow-C-, hidden);
+  position                               : var(--position-C-, absolute);
+  background                             : var(--background-C-, var(--color-C-, #000));
+  background-size                        : var(--bg-size-C-, auto);
+  background-position                    : var(--bg-position-C-, center);
+  background-repeat                      : var(--bg-repeat-C-, no-repeat);
+  background-clip                        : var(--bg-clip-C-, border-box);
+  color                                  : var(--color-C-, var(--background-C-, #fff));
+  width                                  : var(--width-C-, var(--max-width-, auto));
+  height                                 : var(--height-C-, var(--max-height-, auto));
+  filter                                 : var(--filter-C-, none);
+  box-shadow                             : var(--shadow-C-, none);
+  border-radius                          : var(--radius-C-, none);
+  cursor                                 : var(--cursor-C-, auto);
+  pointer-events                         : var(--pointer-C-, auto);
+  user-select                            : var(--user-select-C-, auto);
+  top                                    : var(--top-C-, auto);
+  left                                   : var(--left-C-, auto);
+  right                                  : var(--right-C-, auto);
+  bottom                                 : var(--bottom-C-, auto);
+  z-index                                : var(--z-index-C-, auto);
+  display                                : var(--display-C-, block);
+  flex                                   : var(--flex-C-, none);
+  align-self                             : var(--align-self-C-, auto);
+  border                                 : var(--border-C-, none);
+  border-width                           : var(--border-width-C-, 0);
+  border-style                           : var(--border-style-C-, solid);
+  border-color                           : var(--border-color-C-, currentColor);
+  outline                                : var(--outline-C-, none);
+  outline-offset                         : var(--outline-offset-C-, 0);
+  transform                              : var(--transform-C-, none);
+  transform-origin                       : var(--transform-origin-C-, center);
+  opacity                                : var(--opacity-C-, 1);
+  visibility                             : var(--visibility-C-, visible);
+  transform-origin                       : var(--transform-origin-C-, center);
+  transition-duration                  : var(--transition-duration-, 0.3s);
+  transition-timing-function           : var(--transition-timing-function-, linear);
+  transition-delay                     : var(--transition-delay-, 0s);
+}
+#animation_transition__x_y__active:active::after,
+#animation_transition__x_y__hover:hover::after {
+  position                               : var(--position-D-, relative);
+  background                             : var(--background-D-, var(--color-D-, #000));
+  background-size                        : var(--bg-size-D-, auto);
+  background-position                    : var(--bg-position-D-, center);
+  background-repeat                      : var(--bg-repeat-D-, no-repeat);
+  background-clip                        : var(--bg-clip-D-, border-box);
+  color                                  : var(--color-D-, var(--background-D-, #fff));
+  width                                  : var(--width-D-, var(--max-width-, auto));
+  height                                 : var(--height-D-, var(--max-height-, auto));
+  filter                                 : var(--filter-D-, none);
+  box-shadow                             : var(--shadow-D-, none);
+  border-radius                          : var(--radius-D-, none);
+  cursor                                 : var(--cursor-D-, auto);
+  pointer-events                         : var(--pointer-D-, auto);
+  user-select                            : var(--user-select-D-, auto);
+  top                                    : var(--top-D-, auto);
+  left                                   : var(--left-D-, auto);
+  right                                  : var(--right-D-, auto);
+  bottom                                 : var(--bottom-D-, auto);
+  z-index                                : var(--z-index-D-, auto);
+  display                                : var(--display-D-, block);
+  flex                                   : var(--flex-D-, none);
+  align-self                             : var(--align-self-D-, auto);
+  border                                 : var(--border-D-, none);
+  border-width                           : var(--border-width-D-, 0);
+  border-style                           : var(--border-style-D-, solid);
+  border-color                           : var(--border-color-D-, currentColor);
+  outline                                : var(--outline-D-, none);
+  outline-offset                         : var(--outline-offset-D-, 0);
+  transform                              : var(--transform-D-, none);
+  opacity                                : var(--opacity-D-, 1);
+  visibility                             : var(--visibility-D-, visible);
+  animation-name                       : var(--animation-name-B-, animation);
+  animation-duration                   : var(--animation-duration-B-, 1s);
+  animation-timing-function            : var(--animation-timing-function-B-, linear);
+  animation-delay                      : var(--animation-delay-B-, 0s);
+  animation-iteration-count            : var(--animation-iteration-count-B-, 1);
+  animation-direction                  : var(--animation-direction-B-, normal);
+  animation-fill-mode                  : var(--animation-fill-mode-B-, both);
+  animation-play-state                 : var(--animation-play-state-B-, running);
+}
+@keyframes animation {
+  0% {
+    background                             : var(--background-1-, var(--color-1-, #000));
+    background-size                        : var(--bg-size-1-, auto);
+    background-position                    : var(--bg-position-1-, center);
+    background-repeat                      : var(--bg-repeat-1-, no-repeat);
+    background-clip                        : var(--bg-clip-1-, border-box);
+    color                                  : var(--color-1-, var(--background-1-, #fff));
+    width                                  : var(--width-1-, var(--max-width-, auto));
+    height                                 : var(--height-1-, var(--max-height-, auto));
+    filter                                 : var(--filter-1-, none);
+    box-shadow                             : var(--shadow-1-, none);
+    border-radius                          : var(--border-radius-1-, none);
+    font-size                              : var(--font-size-1-);
+    text-shadow                            : var(--text-shadow-1-, none);
+    letter-spacing                         : var(--letter-spacing-1-, normal);
+    word-spacing                           : var(--word-spacing-1-, normal);
+    line-height                            : var(--line-height-1-, normal);
+    text-decoration                        : var(--text-decoration-1-, none);
+    cursor                                 : var(--cursor-1-, auto);
+    pointer-events                         : var(--pointer-1-, auto);
+    user-select                            : var(--user-select-1-, auto);
+    top                                    : var(--top-1-, auto);
+    left                                   : var(--left-1-, auto);
+    right                                  : var(--right-1-, auto);
+    bottom                                 : var(--bottom-1-, auto);
+    z-index                                : var(--z-index-1-, auto);
+    display                                : var(--display-1-, block);
+    flex                                   : var(--flex-1-, none);
+    align-self                             : var(--align-self-1-, auto);
+    border                                 : var(--border-1-, none);
+    border-width                           : var(--border-width-1-, 0);
+    border-style                           : var(--border-style-1-, solid);
+    border-color                           : var(--border-color-1-, currentColor);
+    outline                                : var(--outline-1-, none);
+    outline-offset                         : var(--outline-offset-1-, 0);
+    transform                              : var(--transform-1-, none);
+    transform-origin                       : var(--transform-origin-1-, center);
+  }
+  25% {
+    background                             : var(--background-2-, var(--color-2-, #000));
+    background-size                        : var(--bg-size-2-, auto);
+    background-position                    : var(--bg-position-2-, center);
+    background-repeat                      : var(--bg-repeat-2-, no-repeat);
+    background-clip                        : var(--bg-clip-2-, border-box);
+    color                                  : var(--color-2-, var(--background-2-, #fff));
+    width                                  : var(--width-2-, var(--max-width-, auto));
+    height                                 : var(--height-2-, var(--max-height-, auto));
+    filter                                 : var(--filter-2-, none);
+    box-shadow                             : var(--shadow-2-, none);
+    border-radius                          : var(--border-radius-2-, none);
+    font-size                              : var(--font-size-2-);
+    text-shadow                            : var(--text-shadow-2-, none);
+    letter-spacing                         : var(--letter-spacing-2-, normal);
+    word-spacing                           : var(--word-spacing-2-, normal);
+    line-height                            : var(--line-height-2-, normal);
+    text-decoration                        : var(--text-decoration-2-, none);
+    cursor                                 : var(--cursor-2-, auto);
+    pointer-events                         : var(--pointer-2-, auto);
+    user-select                            : var(--user-select-2-, auto);
+    top                                    : var(--top-2-, auto);
+    left                                   : var(--left-2-, auto);
+    right                                  : var(--right-2-, auto);
+    bottom                                 : var(--bottom-2-, auto);
+    z-index                                : var(--z-index-2-, auto);
+    display                                : var(--display-2-, block);
+    flex                                   : var(--flex-2-, none);
+    align-self                             : var(--align-self-2-, auto);
+    border                                 : var(--border-2-, none);
+    border-width                           : var(--border-width-2-, 0);
+    border-style                           : var(--border-style-2-, solid);
+    border-color                           : var(--border-color-2-, currentColor);
+    outline                                : var(--outline-2-, none);
+    outline-offset                         : var(--outline-offset-2-, 0);
+    transform                              : var(--transform-2-, none);
+    transform-origin                       : var(--transform-origin-2-, center);
+
+  }
+  50% {
+    background                             : var(--background-3-, var(--color-3-, #000));
+    background-size                        : var(--bg-size-3-, auto);
+    background-position                    : var(--bg-position-3-, center);
+    background-repeat                      : var(--bg-repeat-3-, no-repeat);
+    background-clip                        : var(--bg-clip-3-, border-box);
+    color                                  : var(--color-3-, var(--background-3-, #fff));
+    width                                  : var(--width-3-, var(--max-width-, auto));
+    height                                 : var(--height-3-, var(--max-height-, auto));
+    filter                                 : var(--filter-3-, none);
+    box-shadow                             : var(--shadow-3-, none);
+    border-radius                          : var(--border-radius-3-, none);
+    font-size                              : var(--font-size-3-);
+    text-shadow                            : var(--text-shadow-3-, none);
+    letter-spacing                         : var(--letter-spacing-3-, normal);
+    word-spacing                           : var(--word-spacing-3-, normal);
+    line-height                            : var(--line-height-3-, normal);
+    text-decoration                        : var(--text-decoration-3-, none);
+    cursor                                 : var(--cursor-3-, auto);
+    pointer-events                         : var(--pointer-3-, auto);
+    user-select                            : var(--user-select-3-, auto);
+    top                                    : var(--top-3-, auto);
+    left                                   : var(--left-3-, auto);
+    right                                  : var(--right-3-, auto);
+    bottom                                 : var(--bottom-3-, auto);
+    z-index                                : var(--z-index-3-, auto);
+    display                                : var(--display-3-, block);
+    flex                                   : var(--flex-3-, none);
+    align-self                             : var(--align-self-3-, auto);
+    border                                 : var(--border-3-, none);
+    border-width                           : var(--border-width-3-, 0);
+    border-style                           : var(--border-style-3-, solid);
+    border-color                           : var(--border-color-3-, currentColor);
+    outline                                : var(--outline-3-, none);
+    outline-offset                         : var(--outline-offset-3-, 0);
+    transform                              : var(--transform-3-, none);
+    transform-origin                       : var(--transform-origin-3-, center);
+  }
+  75% {
+    background                             : var(--background-4-, var(--color-4-, #000));
+    background-size                        : var(--bg-size-4-, auto);
+    background-position                    : var(--bg-position-4-, center);
+    background-repeat                      : var(--bg-repeat-4-, no-repeat);
+    background-clip                        : var(--bg-clip-4-, border-box);
+    color                                  : var(--color-4-, var(--background-4-, #fff));
+    width                                  : var(--width-4-, var(--max-width-, auto));
+    height                                 : var(--height-4-, var(--max-height-, auto));
+    filter                                 : var(--filter-4-, none);
+    box-shadow                             : var(--shadow-4-, none);
+    border-radius                          : var(--border-radius-4-, none);
+    font-size                              : var(--font-size-4-);
+    text-shadow                            : var(--text-shadow-4-, none);
+    letter-spacing                         : var(--letter-spacing-4-, normal);
+    word-spacing                           : var(--word-spacing-4-, normal);
+    line-height                            : var(--line-height-4-, normal);
+    text-decoration                        : var(--text-decoration-4-, none);
+    cursor                                 : var(--cursor-4-, auto);
+    pointer-events                         : var(--pointer-4-, auto);
+    user-select                            : var(--user-select-4-, auto);
+    top                                    : var(--top-4-, auto);
+    left                                   : var(--left-4-, auto);
+    right                                  : var(--right-4-, auto);
+    bottom                                 : var(--bottom-4-, auto);
+    z-index                                : var(--z-index-4-, auto);
+    display                                : var(--display-4-, block);
+    flex                                   : var(--flex-4-, none);
+    align-self                             : var(--align-self-4-, auto);
+    border                                 : var(--border-4-, none);
+    border-width                           : var(--border-width-4-, 0);
+    border-style                           : var(--border-style-4-, solid);
+    border-color                           : var(--border-color-4-, currentColor);
+    outline                                : var(--outline-4-, none);
+    outline-offset                         : var(--outline-offset-4-, 0);
+    transform                              : var(--transform-4-, none);
+    transform-origin                       : var(--transform-origin-4-, center);
+  }
+  100% {
+    background                             : var(--background-5-, var(--color-5-, #000));
+    background-size                        : var(--bg-size-5-, auto);
+    background-position                    : var(--bg-position-5-, center);
+    background-repeat                      : var(--bg-repeat-5-, no-repeat);
+    background-clip                        : var(--bg-clip-5-, border-box);
+    color                                  : var(--color-5-, var(--background-5-, #fff));
+    width                                  : var(--width-5-, var(--max-width-, auto));
+    height                                 : var(--height-5-, var(--max-height-, auto));
+    filter                                 : var(--filter-5-, none);
+    box-shadow                             : var(--shadow-5-, none);
+    border-radius                          : var(--border-radius-5-, none);
+    font-size                              : var(--font-size-5-);
+    text-shadow                            : var(--text-shadow-5-, none);
+    letter-spacing                         : var(--letter-spacing-5-, normal);
+    word-spacing                           : var(--word-spacing-5-, normal);
+    line-height                            : var(--line-height-5-, normal);
+    text-decoration                        : var(--text-decoration-5-, none);
+    cursor                                 : var(--cursor-5-, auto);
+    pointer-events                         : var(--pointer-5-, auto);
+    user-select                            : var(--user-select-5-, auto);
+    top                                    : var(--top-5-, auto);
+    left                                   : var(--left-5-, auto);
+    right                                  : var(--right-5-, auto);
+    bottom                                 : var(--bottom-5-, auto);
+    z-index                                : var(--z-index-5-, auto);
+    display                                : var(--display-5-, block);
+    flex                                   : var(--flex-5-, none);
+    align-self                             : var(--align-self-5-, auto);
+    border                                 : var(--border-5-, none);
+    border-width                           : var(--border-width-5-, 0);
+    border-style                           : var(--border-style-5-, solid);
+    border-color                           : var(--border-color-5-, currentColor);
+    outline                                : var(--outline-5-, none);
+    outline-offset                         : var(--outline-offset-5-, 0);
+    transform                              : var(--transform-5-, none);
+    transform-origin                       : var(--transform-origin-5-, center);
+  }
+}*/
+/** ---------- Animation Transition id ---------- */
+#animation_transition__a__visited:visited,
+#animation_transition__a__selection::selection {                            
+  background: var(--background-A-, #000);
+  color: var(--color-A-, #fff);
+  box-shadow: var(--shadow-A-, none);
+  filter: var(--filter-A-, none);
+}
+
+/** -------------------------- Animation Transition class -------------------------- */
+/*
+.animation--transition:active,
+.animation_transition__input__disabled,
+.animation_transition__input__focus_visible,
+.animation_transition__input__focus_within,
+.animation_transition__input__focus,
+.animation_transition__a__target,
+.animation_transition__a__any-link:any-link,
+.animation_transition__x_y__active,
+.animation_transition__x_y__hover {
+  position                               : var(--position-A-, relative);
+  overflow                               : var(--overflow-A-, hidden);
+  background                             : var(--background-A-, var(--color-A-, #000));
+  background-size                        : var(--bg-size-A-, auto);
+  background-position                    : var(--bg-position-A-, center);
+  background-repeat                      : var(--bg-repeat-A-, no-repeat);
+  background-clip                        : var(--bg-clip-A-, border-box);
+  color                                  : var(--color-A-, var(--background-A-, #fff));
+  width                                  : var(--width-A-, var(--max-width-, auto));
+  height                                 : var(--height-A-, var(--max-height-, auto));
+  filter                                 : var(--filter-A-, none);
+  box-shadow                             : var(--shadow-A-, none);
+  border-radius                          : var(--border-radius-A-, none);
+  font-size                              : var(--font-size-A-);
+  text-shadow                            : var(--text-shadow-A-, none);
+  letter-spacing                         : var(--letter-spacing-A-, normal);
+  word-spacing                           : var(--word-spacing-A-, normal);
+  line-height                            : var(--line-height-A-, normal);
+  text-decoration                        : var(--text-decoration-A-, none);
+  cursor                                 : var(--cursor-A-, auto);
+  pointer-events                         : var(--pointer-A-, auto);
+  user-select                            : var(--user-select-A-, auto);
+  top                                    : var(--top-A-, auto);
+  left                                   : var(--left-A-, auto);
+  right                                  : var(--right-A-, auto);
+  bottom                                 : var(--bottom-A-, auto);
+  z-index                                : var(--z-index-A-, auto);
+  display                                : var(--display-A-, block);
+  flex                                   : var(--flex-A-, none);
+  align-self                             : var(--align-self-A-, auto);
+  border                                 : var(--border-A-, none);
+  border-width                           : var(--border-width-A-, 0);
+  border-style                           : var(--border-style-A-, solid);
+  border-color                           : var(--border-color-A-, currentColor);
+  outline                                : var(--outline-A-, none);
+  outline-offset                         : var(--outline-offset-A-, 0);
+  transform                              : var(--transform-A-, none);
+  transform-origin                       : var(--transform-origin-, center);
+  transition-duration                  : var(--transition-duration-, 0.3s);
+  transition-timing-function           : var(--transition-timing-function-, linear);
+  transition-delay                     : var(--transition-delay-, 0s);
+}
+.animation--transition:checked         .animation_transition__input__checked,           .animation_transition__input__checked:checked,
+.animation--transition:disabled        .animation_transition__input__disabled,          .animation_transition__input__disabled:disabled,
+.animation--transition:focus-visible   .animation_transition__input__focus_visible,     .animation_transition__input__focus_visible:focus-visible,
+.animation--transition:focus-within    .animation_transition__input__focus_within,      .animation_transition__input__focus_within:focus-within,
+.animation--transition:focus           .animation_transition__input__focus,             .animation_transition__input:focus,
+.animation--transition:target          .animation_transition__a__target,                 .animation_transition__a__target:target,
+.animation--transition:any-link:hover  .animation_transition__a__any_link,              .animation_transition__a:any-link:hover,
+.animation--transition:active          .animation_transition__x_y__active,              .animation_transition__x_y__active:active,
+.animation--transition:hover           .animation_transition__x_y__hover,               .animation_transition__x_y__hover:hover {
+  position                               : var(--position-B-, relative);
+  overflow                               : var(--overflow-B-, hidden);
+  background                             : var(--background-B-, var(--color-B-, #000));
+  background-size                        : var(--bg-size-B-, auto);
+  background-position                    : var(--bg-position-B-, center);
+  background-repeat                      : var(--bg-repeat-B-, no-repeat);
+  background-clip                        : var(--bg-clip-B-, border-box);
+  color                                  : var(--color-B-, var(--background-B-, #fff));
+  width                                  : var(--width-B-, var(--max-width-, auto));
+  height                                 : var(--height-B-, var(--max-height-, auto));
+  filter                                 : var(--filter-B-, none);
+  box-shadow                             : var(--shadow-B-, none);
+  border-radius                          : var(--radius-B-, none);
+  font-size                              : var(--font-size-B-);
+  text-shadow                            : var(--text-shadow-B-, none);
+  letter-spacing                         : var(--letter-spacing-B-, normal);
+  word-spacing                           : var(--word-spacing-B-, normal);
+  line-height                            : var(--line-height-B-, normal);
+  text-decoration                        : var(--text-decoration-B-, none);
+  cursor                                 : var(--cursor-B-, auto);
+  pointer-events                         : var(--pointer-B-, auto);
+  user-select                            : var(--user-select-B-, auto);
+  top                                    : var(--top-B-, auto);
+  left                                   : var(--left-B-, auto);
+  right                                  : var(--right-B-, auto);
+  bottom                                 : var(--bottom-B-, auto);
+  z-index                                : var(--z-index-B-, auto);
+  display                                : var(--display-B-, block);
+  flex                                   : var(--flex-B-, none);
+  align-self                             : var(--align-self-B-, auto);
+  border                                 : var(--border-B-, none);
+  border-width                           : var(--border-width-B-, 0);
+  border-style                           : var(--border-style-B-, solid);
+  border-color                           : var(--border-color-B-, currentColor);
+  outline                                : var(--outline-B-, none);
+  outline-offset                         : var(--outline-offset-B-, 0);
+  transform                              : var(--transform-B-, none);
+  opacity                                : var(--opacity-B-, 1);
+  visibility                             : var(--visibility-B-, visible);
+  animation-name                       : var(--animation-name-A, animation);
+  animation-duration                   : var(--animation-duration-A, 0.3s);
+  animation-timing-function            : var(--animation-timing-function-A, linear);
+  animation-delay                      : var(--animation-delay-A, 0s);
+  animation-iteration-count            : var(--animation-iteration-count-A, 1);
+  animation-direction                  : var(--animation-direction-A, normal);
+  animation-fill-mode                  : var(--animation-fill-mode-A, both);
+  animation-play-state                 : var(--animation-play-state-B-, running);
+}
+.animation_transition__x_y__active::after,
+.animation_transition__x_y__hover::after {
+  content                                : "";
+  overflow                               : var(--overflow-C-, hidden);
+  position                               : var(--position-C-, absolute);
+  background                             : var(--background-C-, --color-C-, #000);
+  background-size                        : var(--bg-size-C-, auto);
+  background-position                    : var(--bg-position-C-, center);
+  background-repeat                      : var(--bg-repeat-C-, no-repeat);
+  background-clip                        : var(--bg-clip-C-, border-box);
+  color                                  : var(--color-C-, --background-C-, #fff);
+  width                                  : var(--width-C-, --min-width-, --max-width-, auto);
+  height                                 : var(--height-C-, --min-height-, --max-height-, auto);
+  filter                                 : var(--filter-C-, none);
+  box-shadow                             : var(--shadow-C-, none);
+  border-radius                          : var(--radius-C-, none);
+  cursor                                 : var(--cursor-C-, auto);
+  pointer-events                         : var(--pointer-C-, auto);
+  user-select                            : var(--user-select-C-, auto);
+  top                                    : var(--top-C-, auto);
+  left                                   : var(--left-C-, auto);
+  right                                  : var(--right-C-, auto);
+  bottom                                 : var(--bottom-C-, auto);
+  z-index                                : var(--z-index-C-, auto);
+  display                                : var(--display-C-, block);
+  flex                                   : var(--flex-C-, none);
+  align-self                             : var(--align-self-C-, auto);
+  border                                 : var(--border-C-, none);
+  border-width                           : var(--border-width-C-, 0);
+  border-style                           : var(--border-style-C-, solid);
+  border-color                           : var(--border-color-C-, currentColor);
+  outline                                : var(--outline-C-, none);
+  outline-offset                         : var(--outline-offset-C-, 0);
+  transform                              : var(--transform-C-, none);
+  opacity                                : var(--opacity-C-, 1);
+  visibility                             : var(--visibility-C-, visible);
+  transform-origin                       : var(--transform-origin-, center);
+  transition-duration                  : var(--transition-duration-, 0.3s);
+  transition-timing-function           : var(--transition-timing-function-, linear);
+  transition-delay                     : var(--transition-delay-, 0s);
+}
+.animation_transition__x_y__active:active::after,
+.animation_transition__x_y__hover:hover::after {
+  position                               : var(--position-D-, absolute);
+  background                             : var(--background-D-, --color-D-, #000);
+  background-size                        : var(--bg-size-D-, auto);
+  background-position                    : var(--bg-position-D-, center);
+  background-repeat                      : var(--bg-repeat-D-, no-repeat);
+  background-clip                        : var(--bg-clip-D-, border-box);
+  color                                  : var(--color-D-, --background-D-, #fff);
+  width                                  : var(--width-D-, --min-width-, --max-width-, auto);
+  height                                 : var(--height-D-, --min-height-, --max-height-, auto);
+  filter                                 : var(--filter-D-, none);
+  box-shadow                             : var(--shadow-D-, none);
+  border-radius                          : var(--radius-D-, none);
+  cursor                                 : var(--cursor-D-, auto);
+  pointer-events                         : var(--pointer-D-, auto);
+  user-select                            : var(--user-select-D-, auto);
+  top                                    : var(--top-D-, auto);
+  left                                   : var(--left-D-, auto);
+  right                                  : var(--right-D-, auto);
+  bottom                                 : var(--bottom-D-, auto);
+  z-index                                : var(--z-index-D-, auto);
+  display                                : var(--display-D-, block);
+  flex                                   : var(--flex-D-, none);
+  align-self                             : var(--align-self-D-, auto);
+  border                                 : var(--border-D-, none);
+  border-width                           : var(--border-width-D-, 0);
+  border-style                           : var(--border-style-D-, solid);
+  border-color                           : var(--border-color-D-, currentColor);
+  outline                                : var(--outline-D-, none);
+  outline-offset                         : var(--outline-offset-D-, 0);
+  transform                              : var(--transform-D-, none);
+  opacity                                : var(--opacity-D-, 1);
+  visibility                             : var(--visibility-D-, visible);
+  animation-name                       : var(--animation-name-B-, animation);
+  animation-duration                   : var(--animation-duration-B-, 0.3s);
+  animation-timing-function            : var(--animation-timing-function-B-, linear);
+  animation-delay                      : var(--animation-delay-B-, 0s);
+  animation-iteration-count            : var(--animation-iteration-count-B-, 1);
+  animation-direction                  : var(--animation-direction-B-, normal);
+  animation-fill-mode                  : var(--animation-fill-mode-B-, both);
+  animation-play-state                 : var(--animation-play-state-B-, running);
+}
+@keyframes animation {
+  0% {
+    background                             : var(--background-1-, none);
+    color                                  : var(--color-1-, none);
+    width                                  : var(--width-1-, --min-width-, --max-width-, auto);
+    height                                 : var(--height-1-, --min-height-, --max-height-, auto);
+    filter                                 : var(--filter-1-, none);
+    border-radius                          : var(--radius-1-, none);
+    top                                    : var(--top-1-, none);
+    left                                    : var(--left-1-, none);
+    right                                  : var(--right-1-, none);
+    bottom                                 : var(--bottom-1-, none);
+    transform                              : var(--transform-1-, none);
+  }
+  25% {
+    background                             : var(--background-2-, none);
+    color                                  : var(--color-2-, none);
+    width                                  : var(--width-2-, --min-width-, --max-width-, auto);
+    height                                 : var(--height-2-, --min-height-, --max-height-, auto);
+    filter                                 : var(--filter-2-, none);
+    border-radius                          : var(--radius-2-, none);
+    top                                    : var(--top-2-, none);
+    left                                   : var(--left-2-, none);
+    right                                  : var(--right-2-, none);
+    bottom                                 : var(--bottom-2-, none);
+    transform                              : var(--transform-2-, none);
+
+  }
+  50% {
+    background                             : var(--background-3-, none);
+    color                                  : var(--color-3-, none);
+    width                                  : var(--width-3-, --min-width-, --max-width-, auto);
+    height                                 : var(--height-3-, --min-height-, --max-height-, auto);
+    filter                                 : var(--filter-3-, none);
+    border-radius                          : var(--radius-3-, none);
+    top                                    : var(--top-3-, none);
+    left                                   : var(--left-3-, none);
+    right                                  : var(--right-3-, none);
+    bottom                                 : var(--bottom-3-, none);
+    transform                              : var(--transform-3-, none);
+  }
+  75% {
+    background                             : var(--background-4-, none);
+    color                                  : var(--color-4-, none);
+    width                                  : var(--width-4-, --min-width-, --max-width-, auto);
+    height                                 : var(--height-4-, --min-height-, --max-height-, auto);
+    filter                                 : var(--filter-4-, none);
+    border-radius                          : var(--radius-4-, none);
+    top                                    : var(--top-4-, none);
+    left                                   : var(--left-4-, none);
+    right                                  : var(--right-4-, none);
+    bottom                                 : var(--bottom-4-, none);
+    transform                              : var(--transform-4-, none);
+  }
+  100% {
+    background                             : var(--background-5-, none);
+    color                                  : var(--color-5-, none);
+    width                                  : var(--width-5-, --min-width-, --max-width-, auto);
+    height                                 : var(--height-5-, --min-height-, --max-height-, auto);
+    filter                                 : var(--filter-5-, none);
+    border-radius                          : var(--radius-5-, none);
+    top                                    : var(--top-5-, none);
+    left                                   : var(--left-5-, none);
+    right                                  : var(--right-5-, none);
+    bottom                                 : var(--bottom-5-, none);
+    transform                              : var(--transform-5-, none);
+  }
+}*/
+/** ---------- Animation Transition class ---------- */
+#animation_transition__a__visited:visited,
+#animation_transition__a__selection::selection {                            
+  background: var(--background-A-, #000);
+  color: var(--color-A-, #fff);
+  box-shadow: var(--shadow-A-, none);
+  filter: var(--filter-A-, none);
+}
+
+
+/** ---------- Transition hover active ---------- */
+:is(.transition__active, #transition__active),
+:is(.transition__hover, #transition__hover) {
+  position                               : var(--position-A-, relative );
+  overflow                               : var(--overflow-A-, hidden);
+  background                             : var(--background-A-, var(--color-A-, #000));
+  background-size                        : var(--bg-size-A-, auto);
+  background-position                    : var(--bg-position-A-, center);
+  background-repeat                      : var(--bg-repeat-A-, no-repeat);
+  background-clip                        : var(--bg-clip-A-, border-box);
+  color                                  : var(--color-A-, var(--background-A-, #fff));
+  width                                  : var(--width-A-, var(--max-width-, auto));
+  height                                 : var(--height-A-, var(--max-height-, auto));
+  filter                                 : var(--filter-A-, none);
+  box-shadow                             : var(--shadow-A-, none);
+  border-radius                          : var(--border-radius-A-, none);
+  font-size                              : var(--font-size-A-, none);
+  text-shadow                            : var(--text-shadow-A-, none);
+  letter-spacing                         : var(--letter-spacing-A-, normal);
+  word-spacing                           : var(--word-spacing-A-, normal);
+  line-height                            : var(--line-height-A-, normal);
+  text-decoration                        : var(--text-decoration-A-, none);
+  cursor                                 : var(--cursor-A-, auto);
+  pointer-events                         : var(--pointer-A-, auto);
+  user-select                            : var(--user-select-A-, auto);
+  top                                    : var(--top-A-, auto);
+  left                                   : var(--left-A-, auto);
+  right                                  : var(--right-A-, auto);
+  bottom                                 : var(--bottom-A-, auto);
+  z-index                                : var(--z-index-A-, auto);
+  display                                : var(--display-A-, block);
+  flex                                   : var(--flex-A-, none);
+  align-self                             : var(--align-self-A-, auto);
+  border                                 : var(--border-A-, none);
+  border-width                           : var(--border-width-A-, 0);
+  border-style                           : var(--border-style-A-, solid);
+  border-color                           : var(--border-color-A-, currentColor);
+  outline                                : var(--outline-A-, none);
+  outline-offset                         : var(--outline-offset-A-, 0);
+  transform                              : var(--transform-A-, none);
+  transform-origin                       : var(--transform-origin-A-, center);
+  transition-duration                  : var(--transition-duration-, 0.3s);
+  transition-timing-function           : var(--transition-timing-function-, linear);
+  transition-delay                     : var(--transition-delay-, 0s);
+}
+:is(.__auto, #__auto):active             :is(.transition__active, #transition__active), :is(.transition__active, #transition__active):active,
+:is(.__auto, #__auto):hover              :is(.transition__hover, #transition__hover), :is(.transition__hover, #transition__hover):hover 
+{
+  position                               : var(--position-B-, relative);
+  overflow                               : var(--overflow-B-, hidden);
+  background                             : var(--background-B-, var(--color-B-, #000));
+  background-size                        : var(--bg-size-B-, auto);
+  background-position                    : var(--bg-position-B-, center);
+  background-repeat                      : var(--bg-repeat-B-, no-repeat);
+  background-clip                        : var(--bg-clip-B-, border-box);
+  color                                  : var(--color-B-, var(--background-B-, #fff));
+  width                                  : var(--width-B-, var(--max-width-, auto));
+  height                                 : var(--height-B-, var(--max-height-, auto));
+  filter                                 : var(--filter-B-, none);
+  box-shadow                             : var(--shadow-B-, none);
+  border-radius                          : var(--border-radius-B-, none);
+  font-size                              : var(--font-size-B-, none);
+  text-shadow                            : var(--text-shadow-B-, none);
+  letter-spacing                         : var(--letter-spacing-B-, normal);
+  word-spacing                           : var(--word-spacing-B-, normal);
+  line-height                            : var(--line-height-B-, normal);
+  text-decoration                        : var(--text-decoration-B-, none);
+  cursor                                 : var(--cursor-B-, auto);
+  pointer-events                         : var(--pointer-B-, auto);
+  user-select                            : var(--user-select-B-, auto);
+  top                                    : var(--top-B-, auto);
+  left                                   : var(--left-B-, auto);
+  right                                  : var(--right-B-, auto);
+  bottom                                 : var(--bottom-B-, auto);
+  z-index                                : var(--z-index-B-, auto);
+  display                                : var(--display-B-, block);
+  flex                                   : var(--flex-B-, none);
+  align-self                             : var(--align-self-B-, auto);
+  border                                 : var(--border-B-, none);
+  border-width                           : var(--border-width-B-, 0);
+  border-style                           : var(--border-style-B-, solid);
+  border-color                           : var(--border-color-B-, currentColor);
+  outline                                : var(--outline-B-, none);
+  outline-offset                         : var(--outline-offset-B-, 0);
+  transform                              : var(--transform-B-, none);
+  transform-origin                       : var(--transform-origin-B-, center);
+}
+
+/* --- Transition virtual box --- */
+:is(.transition__active-after, #transition__active-after),
+:is(.transition__hover-after, #transition__hover-after) {
+  position                               : var(--position-A-, relative );
+  overflow                               : var(--overflow-A-, hidden);
+  background                             : var(--background-A-, var(--color-A-, #000));
+  background-size                        : var(--bg-size-A-, auto);
+  background-position                    : var(--bg-position-A-, center);
+  background-repeat                      : var(--bg-repeat-A-, no-repeat);
+  background-clip                        : var(--bg-clip-A-, border-box);
+  color                                  : var(--color-A-, var(--background-A-, #fff));
+  width                                  : var(--width-A-, var(--max-width-, auto));
+  height                                 : var(--height-A-, var(--max-height-, auto));
+  filter                                 : var(--filter-A-, none);
+  box-shadow                             : var(--shadow-A-, none);
+  border-radius                          : var(--border-radius-A-, none);
+  font-size                              : var(--font-size-A-, none);
+  text-shadow                            : var(--text-shadow-A-, none);
+  letter-spacing                         : var(--letter-spacing-A-, normal);
+  word-spacing                           : var(--word-spacing-A-, normal);
+  line-height                            : var(--line-height-A-, normal);
+  text-decoration                        : var(--text-decoration-A-, none);
+  cursor                                 : var(--cursor-A-, auto);
+  pointer-events                         : var(--pointer-A-, auto);
+  user-select                            : var(--user-select-A-, auto);
+  top                                    : var(--top-A-, auto);
+  left                                   : var(--left-A-, auto);
+  right                                  : var(--right-A-, auto);
+  bottom                                 : var(--bottom-A-, auto);
+  z-index                                : var(--z-index-A-, auto);
+  display                                : var(--display-A-, block);
+  flex                                   : var(--flex-A-, none);
+  align-self                             : var(--align-self-A-, auto);
+  border                                 : var(--border-A-, none);
+  border-width                           : var(--border-width-A-, 0);
+  border-style                           : var(--border-style-A-, solid);
+  border-color                           : var(--border-color-A-, currentColor);
+  outline                                : var(--outline-A-, none);
+  outline-offset                         : var(--outline-offset-A-, 0);
+  transform                              : var(--transform-A-, none);
+  transform-origin                       : var(--transform-origin-A-, center);
+}
+:is(.transition__active-after, #transition__active-after)::after,
+:is(.transition__hover-after, #transition__hover-after)::after {
+  content                                : "";
+  position                               : var(--position-B-, absolute);
+  overflow                               : var(--overflow-B-, hidden);
+  background                             : var(--background-B-, var(--color-B-, #000));
+  background-size                        : var(--bg-size-B-, auto);
+  background-position                    : var(--bg-position-B-, center);
+  background-repeat                      : var(--bg-repeat-B-, no-repeat);
+  background-clip                        : var(--bg-clip-B-, border-box);
+  color                                  : var(--color-B-, var(--background-B-, #fff));
+  width                                  : var(--width-B-, var(--max-width-, auto));
+  height                                 : var(--height-B-, var(--max-height-, auto));
+  filter                                 : var(--filter-B-, none);
+  box-shadow                             : var(--shadow-B-, none);
+  border-radius                          : var(--border-radius-B-, none);
+  font-size                              : var(--font-size-B-, none);
+  text-shadow                            : var(--text-shadow-B-, none);
+  letter-spacing                         : var(--letter-spacing-B-, normal);
+  word-spacing                           : var(--word-spacing-B-, normal);
+  line-height                            : var(--line-height-B-, normal);
+  text-decoration                        : var(--text-decoration-B-, none);
+  cursor                                 : var(--cursor-B-, auto);
+  pointer-events                         : var(--pointer-B-, auto);
+  user-select                            : var(--user-select-B-, auto);
+  top                                    : var(--top-B-, auto);
+  left                                   : var(--left-B-, auto);
+  right                                  : var(--right-B-, auto);
+  bottom                                 : var(--bottom-B-, auto);
+  z-index                                : var(--z-index-B-, auto);
+  flex                                   : var(--flex-B-, none);
+  align-self                             : var(--align-self-B-, auto);
+  border                                 : var(--border-B-, none);
+  border-width                           : var(--border-width-B-, 0);
+  border-style                           : var(--border-style-B-, solid);
+  border-color                           : var(--border-color-B-, currentColor);
+  outline                                : var(--outline-B-, none);
+  outline-offset                         : var(--outline-offset-B-, 0);
+  transform                              : var(--transform-B-, none);
+  transform-origin                       : var(--transform-origin-B-, center);
+  transition-duration                  : var(--transition-duration-, 1s);
+  transition-timing-function           : var(--transition-timing-function-, linear);
+  transition-delay                     : var(--transition-delay-, 0s);
+  transition-property                  : all;
+}
+:is(.__auto, #__auto):active             :is(.transition__active-after, #transition__active-after)::after, :is(.transition__active-after, #transition__active-after):active::after,
+:is(.__auto, #__auto):hover              :is(.transition__hover-after, #transition__hover-after)::after, :is(.transition__hover-after, #transition__hover-after):hover::after 
+{
+  position                               : var(--position-C-, absolute);
+  overflow                               : var(--overflow-C-, hidden);
+  background                             : var(--background-C-, var(--color-C-, #000));
+  background-size                        : var(--bg-size-C-, auto);
+  background-position                    : var(--bg-position-C-, center);
+  background-repeat                      : var(--bg-repeat-C-, no-repeat);
+  background-clip                        : var(--bg-clip-C-, border-box);
+  color                                  : var(--color-C-, var(--background-C-, #fff)); 
+  width                                  : var(--width-C-, var(--max-width-, auto));
+  height                                 : var(--height-C-, var(--max-height-, auto));
+  filter                                 : var(--filter-C-, none);
+  box-shadow                             : var(--shadow-C-, none);
+  border-radius                          : var(--border-radius-C-, none);
+  font-size                              : var(--font-size-C-, none);
+  text-shadow                            : var(--text-shadow-C-, none);
+  letter-spacing                         : var(--letter-spacing-C-, normal);
+  word-spacing                           : var(--word-spacing-C-, normal);
+  line-height                            : var(--line-height-C-, normal);
+  text-decoration                        : var(--text-decoration-C-, none);
+  cursor                                 : var(--cursor-C-, auto);
+  pointer-events                         : var(--pointer-C-, auto);
+  user-select                            : var(--user-select-C-, auto); 
+  top                                    : var(--top-C-, auto);
+  left                                   : var(--left-C-, auto);
+  right                                  : var(--right-C-, auto);
+  bottom                                 : var(--bottom-C-, auto);
+  z-index                                : var(--z-index-C-, auto);
+  flex                                   : var(--flex-C-, none);
+  align-self                             : var(--align-self-C-, auto);
+  border                                 : var(--border-C-, none);
+  border-width                           : var(--border-width-C-, 0);
+  border-style                           : var(--border-style-C-, solid);
+  border-color                           : var(--border-color-C-, currentColor);
+  outline                                : var(--outline-C-, none);
+  outline-offset                         : var(--outline-offset-C-, 0);
+  transform                              : var(--transform-C-, none);
+  transform-origin                       : var(--transform-origin-C-, center);
+}
+
+
+/** ---------- Animation hover active ---------- */
+:is(.animation__active, #animation__active),
+:is(.animation__hover, #animation__hover) {
+  position                               : var(--position-A-, relative );
+  overflow                               : var(--overflow-A-, hidden);
+  background                             : var(--background-A-, var(--color-A-, #000));
+  background-size                        : var(--bg-size-A-, auto);
+  background-position                    : var(--bg-position-A-, center);
+  background-repeat                      : var(--bg-repeat-A-, no-repeat);
+  background-clip                        : var(--bg-clip-A-, border-box);
+  color                                  : var(--color-A-, var(--background-A-, #fff));
+  width                                  : var(--width-A-, var(--max-width-, auto));
+  height                                 : var(--height-A-, var(--max-height-, auto));
+  filter                                 : var(--filter-A-, none);
+  box-shadow                             : var(--shadow-A-, none);
+  border-radius                          : var(--border-radius-A-, none);
+  font-size                              : var(--font-size-A-, none);
+  text-shadow                            : var(--text-shadow-A-, none);
+  letter-spacing                         : var(--letter-spacing-A-, normal);
+  word-spacing                           : var(--word-spacing-A-, normal);
+  line-height                            : var(--line-height-A-, normal);
+  text-decoration                        : var(--text-decoration-A-, none);
+  cursor                                 : var(--cursor-A-, auto);
+  pointer-events                         : var(--pointer-A-, auto);
+  user-select                            : var(--user-select-A-, auto);
+  top                                    : var(--top-A-, auto);
+  left                                   : var(--left-A-, auto);
+  right                                  : var(--right-A-, auto);
+  bottom                                 : var(--bottom-A-, auto);
+  z-index                                : var(--z-index-A-, auto);
+  clip-path                              : var(--clip-path-A-, none);
+  display                                : var(--display-A-, block);
+  flex                                   : var(--flex-A-, none);
+  align-self                             : var(--align-self-A-, auto);
+  border                                 : var(--border-A-, none);
+  border-width                           : var(--border-width-A-, 0);
+  border-style                           : var(--border-style-A-, solid);
+  border-color                           : var(--border-color-A-, currentColor);
+  outline                                : var(--outline-A-, none);
+  outline-offset                         : var(--outline-offset-A-, 0);
+  transform                              : var(--transform-A-, none);
+  transform-origin                       : var(--transform-origin-A-, center);
+}
+:is(.__auto, #__auto):active             :is(.animation__active, #animation__active), :is(.animation__active, #animation__active):active,
+:is(.__auto, #__auto):hover              :is(.animation__hover, #animation__hover), :is(.animation__hover, #animation__hover):hover 
+{
+  position                               : var(--position-B-, relative);
+  overflow                               : var(--overflow-B-, hidden);
+  background                             : var(--background-B-, var(--color-B-, #000));
+  background-size                        : var(--bg-size-B-, auto);
+  background-position                    : var(--bg-position-B-, center);
+  background-repeat                      : var(--bg-repeat-B-, no-repeat);
+  background-clip                        : var(--bg-clip-B-, border-box);
+  color                                  : var(--color-B-, var(--background-B-, #fff));
+  width                                  : var(--width-B-, var(--max-width-, auto));
+  height                                 : var(--height-B-, var(--max-height-, auto));
+  filter                                 : var(--filter-B-, none);
+  box-shadow                             : var(--shadow-B-, none);
+  border-radius                          : var(--border-radius-B-, none);
+  font-size                              : var(--font-size-B-, none);
+  text-shadow                            : var(--text-shadow-B-, none);
+  letter-spacing                         : var(--letter-spacing-B-, normal);
+  word-spacing                           : var(--word-spacing-B-, normal);
+  line-height                            : var(--line-height-B-, normal);
+  text-decoration                        : var(--text-decoration-B-, none);
+  cursor                                 : var(--cursor-B-, auto);
+  pointer-events                         : var(--pointer-B-, auto);
+  user-select                            : var(--user-select-B-, auto);
+  top                                    : var(--top-B-, auto);
+  left                                   : var(--left-B-, auto);
+  right                                  : var(--right-B-, auto);
+  bottom                                 : var(--bottom-B-, auto);
+  z-index                                : var(--z-index-B-, auto);
+  clip-path                              : var(--clip-path-B-, none);
+  display                                : var(--display-B-, block);
+  flex                                   : var(--flex-B-, none);
+  align-self                             : var(--align-self-B-, auto);
+  border                                 : var(--border-B-, none);
+  border-width                           : var(--border-width-B-, 0);
+  border-style                           : var(--border-style-B-, solid);
+  border-color                           : var(--border-color-B-, currentColor);
+  outline                                : var(--outline-B-, none);
+  outline-offset                         : var(--outline-offset-B-, 0);
+  transform                              : var(--transform-B-, none);
+  transform-origin                       : var(--transform-origin-B-, center);
+  animation-name                       : var(--animation-name-A-, animation);
+  animation-duration                   : var(--animation-duration-A-, 1s);
+  animation-timing-function            : var(--animation-timing-function-A-, linear);
+  animation-delay                      : var(--animation-delay-A-, 0s);
+  animation-iteration-count            : var(--animation-iteration-count-A-, 1);
+  animation-direction                  : var(--animation-direction-A-, normal);
+  animation-fill-mode                  : var(--animation-fill-mode-A-, both);
+  animation-play-state                 : var(--animation-play-state-A-, running);
+}
+/* --- Animation virtual box --- */
+:is(.animation__active-after, #animation__active-after)
+:is(.animation__hover-after, #animation__hover-after) {
+  position                               : var(--position-A-, relative );
+  overflow                               : var(--overflow-A-, hidden);
+  background                             : var(--background-A-, var(--color-A-, #000));
+  background-size                        : var(--bg-size-A-, auto);
+  background-position                    : var(--bg-position-A-, center);
+  background-repeat                      : var(--bg-repeat-A-, no-repeat);
+  background-clip                        : var(--bg-clip-A-, border-box);
+  color                                  : var(--color-A-, var(--background-A-, #fff));
+  width                                  : var(--width-A-, var(--max-width-, auto));
+  height                                 : var(--height-A-, var(--max-height-, auto));
+  filter                                 : var(--filter-A-, none);
+  box-shadow                             : var(--shadow-A-, none);
+  border-radius                          : var(--border-radius-A-, none);
+  font-size                              : var(--font-size-A-, none);
+  text-shadow                            : var(--text-shadow-A-, none);
+  letter-spacing                         : var(--letter-spacing-A-, normal);
+  word-spacing                           : var(--word-spacing-A-, normal);
+  line-height                            : var(--line-height-A-, normal);
+  text-decoration                        : var(--text-decoration-A-, none);
+  cursor                                 : var(--cursor-A-, auto);
+  pointer-events                         : var(--pointer-A-, auto);
+  user-select                            : var(--user-select-A-, auto);
+  top                                    : var(--top-A-, auto);
+  left                                   : var(--left-A-, auto);
+  right                                  : var(--right-A-, auto);
+  bottom                                 : var(--bottom-A-, auto);
+  z-index                                : var(--z-index-A-, auto);
+  clip-path                              : var(--clip-path-A-, none);
+  display                                : var(--display-A-, block);
+  flex                                   : var(--flex-A-, none);
+  align-self                             : var(--align-self-A-, auto);
+  border                                 : var(--border-A-, none);
+  border-width                           : var(--border-width-A-, 0);
+  border-style                           : var(--border-style-A-, solid);
+  border-color                           : var(--border-color-A-, currentColor);
+  outline                                : var(--outline-A-, none);
+  outline-offset                         : var(--outline-offset-A-, 0);
+  transform                              : var(--transform-A-, none);
+  transform-origin                       : var(--transform-origin-A-, center);
+}
+:is(.animation__active-after, #animation__active-after)::after,
+:is(.animation__hover-after, #animation__hover-after)::after {
+  content                                : "";
+  position                               : var(--position-B-, absolute );
+  overflow                               : var(--overflow-B-, hidden);
+  background                             : var(--background-B-, var(--color-B-, #000));
+  background-size                        : var(--bg-size-B-, auto);
+  background-position                    : var(--bg-position-B-, center);
+  background-repeat                      : var(--bg-repeat-B-, no-repeat);
+  background-clip                        : var(--bg-clip-B-, border-box);
+  color                                  : var(--color-B-, var(--background-B-, #fff));
+  width                                  : var(--width-B-, var(--max-width-, auto));
+  height                                 : var(--height-B-, var(--max-height-, auto));
+  filter                                 : var(--filter-B-, none);
+  box-shadow                             : var(--shadow-B-, none);
+  border-radius                          : var(--border-radius-B-, none);
+  font-size                              : var(--font-size-B-, none);
+  text-shadow                            : var(--text-shadow-B-, none);
+  letter-spacing                         : var(--letter-spacing-B-, normal);
+  word-spacing                           : var(--word-spacing-B-, normal);
+  line-height                            : var(--line-height-B-, normal);
+  text-decoration                        : var(--text-decoration-B-, none);
+  cursor                                 : var(--cursor-B-, auto);
+  pointer-events                         : var(--pointer-B-, auto);
+  user-select                            : var(--user-select-B-, auto);
+  top                                    : var(--top-B-, auto);
+  left                                   : var(--left-B-, auto);
+  right                                  : var(--right-B-, auto);
+  bottom                                 : var(--bottom-B-, auto);
+  z-index                                : var(--z-index-B-, auto);
+  clip-path                              : var(--clip-path-B-, none);
+  display                                : var(--display-B-, block);
+  flex                                   : var(--flex-B-, none);
+  align-self                             : var(--align-self-B-, auto);
+  border                                 : var(--border-B-, none);
+  border-width                           : var(--border-width-B-, 0);
+  border-style                           : var(--border-style-B-, solid);
+  border-color                           : var(--border-color-B-, currentColor);
+  outline                                : var(--outline-B-, none);
+  outline-offset                         : var(--outline-offset-B-, 0);
+  transform                              : var(--transform-B-, none);
+  transform-origin                       : var(--transform-origin-B-, center);
+}
+:is(.__auto, #__auto):active             :is(.animation__active-after, #animation__active-after)::after, :is(.animation__active-after, #animation__active-after):active::after,
+:is(.__auto, #__auto):hover              :is(.animation__hover-after, #animation__hover-after)::after, :is(.animation__hover-after, #animation__hover-after):hover::after 
+{
+  position                               : var(--position-C-, absolute);
+  overflow                               : var(--overflow-C-, hidden);
+  background                             : var(--background-C-, var(--color-C-, #000));
+  background-size                        : var(--bg-size-C-, auto);
+  background-position                    : var(--bg-position-C-, center);
+  background-repeat                      : var(--bg-repeat-C-, no-repeat);
+  background-clip                        : var(--bg-clip-C-, border-box);
+  color                                  : var(--color-C-, var(--background-C-, #fff));
+  width                                  : var(--width-C-, var(--max-width-, auto));
+  height                                 : var(--height-C-, var(--max-height-, auto));
+  filter                                 : var(--filter-C-, none);
+  box-shadow                             : var(--shadow-C-, none);
+  border-radius                          : var(--border-radius-C-, none);
+  font-size                              : var(--font-size-C-, none);
+  text-shadow                            : var(--text-shadow-C-, none);
+  letter-spacing                         : var(--letter-spacing-C-, normal);
+  word-spacing                           : var(--word-spacing-C-, normal);
+  line-height                            : var(--line-height-C-, normal);
+  text-decoration                        : var(--text-decoration-C-, none);
+  cursor                                 : var(--cursor-C-, auto);
+  pointer-events                         : var(--pointer-C-, auto);
+  user-select                            : var(--user-select-C-, auto);
+  top                                    : var(--top-C-, auto);
+  left                                   : var(--left-C-, auto);
+  right                                  : var(--right-C-, auto);
+  bottom                                 : var(--bottom-C-, auto);
+  z-index                                : var(--z-index-C-, auto);
+  clip-path                              : var(--clip-path-C-, none);
+  display                                : var(--display-C-, block);
+  flex                                   : var(--flex-C-, none);
+  align-self                             : var(--align-self-C-, auto);
+  border                                 : var(--border-C-, none);
+  border-width                           : var(--border-width-C-, 0);
+  border-style                           : var(--border-style-C-, solid);
+  border-color                           : var(--border-color-C-, currentColor);
+  outline                                : var(--outline-C-, none);
+  outline-offset                         : var(--outline-offset-C-, 0);
+  transform                              : var(--transform-C-, none);
+  transform-origin                       : var(--transform-origin-C-, center);
+  animation-name                       : var(--animation-name-A-, animation);
+  animation-duration                   : var(--animation-duration-A-, 1s);
+  animation-timing-function            : var(--animation-timing-function-A-, linear);
+  animation-delay                      : var(--animation-delay-A-, 0s);
+  animation-iteration-count            : var(--animation-iteration-count-A-, 1);
+  animation-direction                  : var(--animation-direction-A-, normal);
+  animation-fill-mode                  : var(--animation-fill-mode-A-, both);
+  animation-play-state                 : var(--animation-play-state-A-, running);
+}
+
+
+
+@keyframes animation {
+  0% {
+    background                             : var(--background-1-, var(--color-1-, #000));
+    background-size                        : var(--bg-size-1-, auto);
+    background-position                    : var(--bg-position-1-, center);
+    background-repeat                      : var(--bg-repeat-1-, no-repeat);
+    background-clip                        : var(--bg-clip-1-, border-box);
+    color                                  : var(--color-1-, var(--background-1-, #fff));
+    width                                  : var(--width-1-, var(--max-width-, auto));
+    height                                 : var(--height-1-, var(--max-height-, auto));
+    filter                                 : var(--filter-1-, none);
+    box-shadow                             : var(--shadow-1-, none);
+    border-radius                          : var(--border-radius-1-, none);
+    font-size                              : var(--font-size-1-);
+    text-shadow                            : var(--text-shadow-1-, none);
+    letter-spacing                         : var(--letter-spacing-1-, normal);
+    word-spacing                           : var(--word-spacing-1-, normal);
+    line-height                            : var(--line-height-1-, normal);
+    text-decoration                        : var(--text-decoration-1-, none);
+    cursor                                 : var(--cursor-1-, auto);
+    pointer-events                         : var(--pointer-1-, auto);
+    user-select                            : var(--user-select-1-, auto);
+    top                                    : var(--top-1-, auto);
+    left                                   : var(--left-1-, auto);
+    right                                  : var(--right-1-, auto);
+    bottom                                 : var(--bottom-1-, auto);
+    z-index                                : var(--z-index-1-, auto);
+    clip-path                              : var(--clip-path-1-, none);
+    flex                                   : var(--flex-1-, none);
+    align-self                             : var(--align-self-1-, auto);
+    border                                 : var(--border-1-, none);
+    border-width                           : var(--border-width-1-, 0);
+    border-style                           : var(--border-style-1-, solid);
+    border-color                           : var(--border-color-1-, currentColor);
+    outline                                : var(--outline-1-, none);
+    outline-offset                         : var(--outline-offset-1-, 0);
+    transform                              : var(--transform-1-, none);
+    transform-origin                       : var(--transform-origin-1-, center);
+  }
+  25% {
+    background                             : var(--background-2-, var(--color-2-, #000));
+    background-size                        : var(--bg-size-2-, auto);
+    background-position                    : var(--bg-position-2-, center);
+    background-repeat                      : var(--bg-repeat-2-, no-repeat);
+    background-clip                        : var(--bg-clip-2-, border-box);
+    color                                  : var(--color-2-, var(--background-2-, #fff));
+    width                                  : var(--width-2-, var(--max-width-, auto));
+    height                                 : var(--height-2-, var(--max-height-, auto));
+    filter                                 : var(--filter-2-, none);
+    box-shadow                             : var(--shadow-2-, none);
+    border-radius                          : var(--border-radius-2-, none);
+    font-size                              : var(--font-size-2-);
+    text-shadow                            : var(--text-shadow-2-, none);
+    letter-spacing                         : var(--letter-spacing-2-, normal);
+    word-spacing                           : var(--word-spacing-2-, normal);
+    line-height                            : var(--line-height-2-, normal);
+    text-decoration                        : var(--text-decoration-2-, none);
+    cursor                                 : var(--cursor-2-, auto);
+    pointer-events                         : var(--pointer-2-, auto);
+    user-select                            : var(--user-select-2-, auto);
+    top                                    : var(--top-2-, auto);
+    left                                   : var(--left-2-, auto);
+    right                                  : var(--right-2-, auto);
+    bottom                                 : var(--bottom-2-, auto);
+    z-index                                : var(--z-index-2-, auto);
+    clip-path                              : var(--clip-path-2-, none);
+    flex                                   : var(--flex-2-, none);
+    align-self                             : var(--align-self-2-, auto);
+    border                                 : var(--border-2-, none);
+    border-width                           : var(--border-width-2-, 0);
+    border-style                           : var(--border-style-2-, solid);
+    border-color                           : var(--border-color-2-, currentColor);
+    outline                                : var(--outline-2-, none);
+    outline-offset                         : var(--outline-offset-2-, 0);
+    transform                              : var(--transform-2-, none);
+    transform-origin                       : var(--transform-origin-2-, center);
+  }
+  50% {
+    background                             : var(--background-3-, var(--color-3-, #000));
+    background-size                        : var(--bg-size-3-, auto);
+    background-position                    : var(--bg-position-3-, center);
+    background-repeat                      : var(--bg-repeat-3-, no-repeat);
+    background-clip                        : var(--bg-clip-3-, border-box);
+    color                                  : var(--color-3-, var(--background-3-, #fff));
+    width                                  : var(--width-3-, var(--max-width-, auto));
+    height                                 : var(--height-3-, var(--max-height-, auto));
+    filter                                 : var(--filter-3-, none);
+    box-shadow                             : var(--shadow-3-, none);
+    border-radius                          : var(--border-radius-3-, none);
+    font-size                              : var(--font-size-3-);
+    text-shadow                            : var(--text-shadow-3-, none);
+    letter-spacing                         : var(--letter-spacing-3-, normal);
+    word-spacing                           : var(--word-spacing-3-, normal);
+    line-height                            : var(--line-height-3-, normal);
+    text-decoration                        : var(--text-decoration-3-, none);
+    cursor                                 : var(--cursor-3-, auto);
+    pointer-events                         : var(--pointer-3-, auto);
+    user-select                            : var(--user-select-3-, auto);
+    top                                    : var(--top-3-, auto);
+    left                                   : var(--left-3-, auto);
+    right                                  : var(--right-3-, auto);
+    bottom                                 : var(--bottom-3-, auto);
+    z-index                                : var(--z-index-3-, auto);
+    clip-path                              : var(--clip-path-3-, none);
+    flex                                   : var(--flex-3-, none);
+    align-self                             : var(--align-self-3-, auto);
+    border                                 : var(--border-3-, none);
+    border-width                           : var(--border-width-3-, 0);
+    border-style                           : var(--border-style-3-, solid);
+    border-color                           : var(--border-color-3-, currentColor);
+    outline                                : var(--outline-3-, none);
+    outline-offset                         : var(--outline-offset-3-, 0);
+    transform                              : var(--transform-3-, none);
+    transform-origin                       : var(--transform-origin-3-, center);
+  }
+  75% {
+    background                             : var(--background-4-, var(--color-4-, #000));
+    background-size                        : var(--bg-size-4-, auto);
+    background-position                    : var(--bg-position-4-, center);
+    background-repeat                      : var(--bg-repeat-4-, no-repeat);
+    background-clip                        : var(--bg-clip-4-, border-box);
+    color                                  : var(--color-4-, var(--background-4-, #fff));
+    width                                  : var(--width-4-, var(--max-width-, auto));
+    height                                 : var(--height-4-, var(--max-height-, auto));
+    filter                                 : var(--filter-4-, none);
+    box-shadow                             : var(--shadow-4-, none);
+    border-radius                          : var(--border-radius-4-, none);
+    font-size                              : var(--font-size-4-);
+    text-shadow                            : var(--text-shadow-4-, none);
+    letter-spacing                         : var(--letter-spacing-4-, normal);
+    word-spacing                           : var(--word-spacing-4-, normal);
+    line-height                            : var(--line-height-4-, normal);
+    text-decoration                        : var(--text-decoration-4-, none);
+    cursor                                 : var(--cursor-4-, auto);
+    pointer-events                         : var(--pointer-4-, auto);
+    user-select                            : var(--user-select-4-, auto);
+    top                                    : var(--top-4-, auto);
+    left                                   : var(--left-4-, auto);
+    right                                  : var(--right-4-, auto);
+    bottom                                 : var(--bottom-4-, auto);
+    z-index                                : var(--z-index-4-, auto);
+    clip-path                              : var(--clip-path-4-, none);
+    flex                                   : var(--flex-4-, none);
+    align-self                             : var(--align-self-4-, auto);
+    border                                 : var(--border-4-, none);
+    border-width                           : var(--border-width-4-, 0);
+    border-style                           : var(--border-style-4-, solid);
+    border-color                           : var(--border-color-4-, currentColor);
+    outline                                : var(--outline-4-, none);
+    outline-offset                         : var(--outline-offset-4-, 0);
+    transform                              : var(--transform-4-, none);
+    transform-origin                       : var(--transform-origin-4-, center);
+  }
+  100% {
+    background                             : var(--background-5-, var(--color-5-, #000));
+    background-size                        : var(--bg-size-5-, auto);
+    background-position                    : var(--bg-position-5-, center);
+    background-repeat                      : var(--bg-repeat-5-, no-repeat);
+    background-clip                        : var(--bg-clip-5-, border-box);
+    color                                  : var(--color-5-, var(--background-5-, #fff));
+    width                                  : var(--width-5-, var(--max-width-, auto));
+    height                                 : var(--height-5-, var(--max-height-, auto));
+    filter                                 : var(--filter-5-, none);
+    box-shadow                             : var(--shadow-5-, none);
+    border-radius                          : var(--border-radius-5-, none);
+    font-size                              : var(--font-size-5-);
+    text-shadow                            : var(--text-shadow-5-, none);
+    letter-spacing                         : var(--letter-spacing-5-, normal);
+    word-spacing                           : var(--word-spacing-5-, normal);
+    line-height                            : var(--line-height-5-, normal);
+    text-decoration                        : var(--text-decoration-5-, none);
+    cursor                                 : var(--cursor-5-, auto);
+    pointer-events                         : var(--pointer-5-, auto);
+    user-select                            : var(--user-select-5-, auto);
+    top                                    : var(--top-5-, auto);
+    left                                   : var(--left-5-, auto);
+    right                                  : var(--right-5-, auto);
+    bottom                                 : var(--bottom-5-, auto);
+    z-index                                : var(--z-index-5-, auto);
+    clip-path                              : var(--clip-path-5-, none);
+    flex                                   : var(--flex-5-, none);
+    align-self                             : var(--align-self-5-, auto);
+    border                                 : var(--border-5-, none);
+    border-width                           : var(--border-width-5-, 0);
+    border-style                           : var(--border-style-5-, solid);
+    border-color                           : var(--border-color-5-, currentColor);
+    outline                                : var(--outline-5-, none);
+    outline-offset                         : var(--outline-offset-5-, 0);
+    transform                              : var(--transform-5-, none);
+    transform-origin                       : var(--transform-origin-5-, center); 
+  }
+}
+
+
+
+
 /** ---------- wiggle ---------- */
 :root { /* --- var wiggle --- */
-  --wiggle         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  --wiggle          : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
   --wiggle--left    : polygon(0 0, 80% 0, 100% 100%, 20% 100%);
   --wiggle--right   : polygon(20% 0, 100% 0, 80% 100%, 0 100%);
 }
@@ -59,7 +1377,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /** ---------- wiggle up ---------- */
 
 :root { /* --- var wiggle-up --- */
-  --wiggle-up         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  --wiggle-up          : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
   --wiggle-up--left    : polygon(0 0, 80% 0, 90% 100%, 10% 100%);
   --wiggle-up--right   : polygon(20% 0, 100% 0, 90% 100%, 10% 100%);
 }
@@ -84,7 +1402,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /** ---------- wiggle down ---------- */
 :root { /* --- var wiggle down --- */
-  --wiggle-down         : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  --wiggle-down          : polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
   --wiggle-down--left    : polygon(10% 0, 90% 0, 100% 100%, 20% 100%);
   --wiggle-down--right   : polygon(10% 0, 90% 0, 80% 100%, 0% 100%);
 }
@@ -111,9 +1429,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition wiggle left --- */
 #transition_box_wiggle__left {
   clip-path                  : var(--wiggle);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
+  transition-duration        : var(--duration-, 0.3s);
+  transition-timing-function : var(--timing-function-, linear);
+  transition-delay           : var(--delay-, 0s);
 }
 #transition_box_wiggle__left:hover {
   clip-path: var(--wiggle--left);
@@ -122,9 +1440,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition wiggle right --- */
 #transition_box_wiggle__right {
   clip-path                  : var(--wiggle);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
+  transition-duration        : var(--duration-, 0.3s);
+  transition-timing-function : var(--timing-function-, linear);
+  transition-delay           : var(--delay-, 0s);
 }
 #transition_box_wiggle__right:hover {
   clip-path: var(--wiggle--right);
@@ -133,9 +1451,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition wiggle up-left --- */
 #transition_box_wiggle__up_left {
   clip-path                  : var(--wiggle);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
+  transition-duration        : var(--duration-, 0.3s);
+  transition-timing-function : var(--timing-function-, linear);
+  transition-delay           : var(--delay-, 0s);
 }
 #transition_box_wiggle__up_left:hover {
   clip-path: var(--wiggle-up--left);
@@ -144,9 +1462,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition wiggle up-right --- */
 #transition_box_wiggle__up_right {
   clip-path                  : var(--wiggle);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
+  transition-duration        : var(--duration-, 0.3s);
+  transition-timing-function : var(--timing-function-, linear);
+  transition-delay           : var(--delay-, 0s);
 }
 #transition_box_wiggle__up_right:hover {
   clip-path: var(--wiggle-up--right);
@@ -155,9 +1473,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition wiggle down-left --- */
 #transition_box_wiggle__down_left {
   clip-path                  : var(--wiggle);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
+  transition-duration        : var(--duration-, 0.3s);
+  transition-timing-function : var(--timing-function-, linear);
+  transition-delay           : var(--delay-, 0s);
 }
 #transition_box_wiggle__down_left:hover {
   clip-path: var(--wiggle-down--right);
@@ -166,9 +1484,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 /* --- Transition wiggle down-right --- */
 #transition_box_wiggle__down_right {
   clip-path                  : var(--wiggle);
-  transition-duration        : 0.3s;
-  transition-timing-function : linear;
-  transition-delay           : 0s;
+  transition-duration        : var(--duration-, 0.3s);
+  transition-timing-function : var(--timing-function-, linear);
+  transition-delay           : var(--delay-, 0s);
 }
 #transition_box_wiggle__down_right:hover {
   clip-path: var(--wiggle-down--left);
@@ -264,20 +1582,20 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 #transition_tem_underline__left::after {
   content                                : "";
   position                               : absolute;
-  background                             : var(--background-color-A-);
+  background                             : var(--color-A-, #000);
   border-radius                          : 100px;
   width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
   right                                  : 0;
-  transition-duration                    : var(--duration-);
-  transition-timing-function             : var(--timing-function-);
-  transition-delay                       : var(--delay-);
+  transition-duration                    : var(--duration-, 1s);
+  transition-timing-function             : var(--timing-function-, ease);
+  transition-delay                       : var(--delay-, 0s);
 }
-:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
-#transition_tem_underline__left:hover::after {
+:is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li):hover
+#transition_tem_underline__left::after {
   width: var(--max-width-, 100%);
-  background: var(--color-B-);
+  background: var(--color-B-, #000);
 }
 
 /* --- Transition underline right --- */
@@ -340,9 +1658,9 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   width                                  : var(--min-width-, 0%);
   height                                 : calc(var(--font-size-) / 8);
   top                                    : calc(var(--font-size-) + var(--calc-A-));
-  transition-duration                    : var(--duration-);
-  transition-timing-function             : var(--timing-function-);
-  transition-delay                       : var(--delay-);
+  transition-duration                    : var(--duration-, 1s);
+  transition-timing-function             : var(--timing-function-, linear);
+  transition-delay                       : var(--delay-, 0s);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
 #transition_tem_underline__go_right:hover::before {
@@ -508,18 +1826,19 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 
 /* --- Transition shadow left --- */
 #transition_tem_shadow__left {
-  filter                                 : var(--shadow-A-);
-  transition-duration                    : var(--duration-);
-  transition-timing-function             : var(--timing-function-);
-  transition-delay                       : var(--delay-);
+  filter                                 : var(--shadow-A-, 0px 0px 2px red);
+  transition-duration                    : var(--duration-, 1s);
+  transition-timing-function             : var(--timing-function-, linear);
+  transition-delay                       : var(--delay-, 0s);
 }
 :is(div, nav, a, p, b, i, s, u, span, strong, h1, h2, h3, h4, h5, h6, ul, ol, li, ):hover
 #transition_tem_shadow__left:hover {
   filter: drop-shadow(calc(var(--font-size-) / 10 * var(--minus-)) 0rem var(--shadow-B-) var(--color-B-));
+  /* filter: drop-shadow(10px 10px 10px red) */
 }
 
 /** ---------- box shadow ---------- */
-/* Transition shadow down-right */
+/* --- Transition shadow down-right --- */
 #transition_box_shadow__down_right {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -530,18 +1849,18 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   box-shadow: calc(var(--font-size-) / 10) calc(var(--font-size-) / 10 * var(--plus-)) var(--shadow-B-) var(--color-B-);
 }
 
-/* Transition shadow down-left */
+/* --- Transition shadow down-left --- */
 #transition_box_shadow__down_left {
   box-shadow                             : var(--shadow-A-);
-  transition-duration                    : var(--duration-);
-  transition-timing-function             : var(--timing-function-);
-  transition-delay                       : var(--delay-);
+  transition-duration                    : var(--duration-, 1s);
+  transition-timing-function             : var(--timing-function-, linear);
+  transition-delay                       : var(--delay-, 0s);
 }
 #transition_box_shadow__down_left:hover {
   box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--plus-)) var(--shadow-B-) var(--color-B-);
 }
 
-/* Transition shadow up-right */
+/* --- Transition shadow up-right --- */
 #transition_box_shadow__up_right {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -552,7 +1871,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   box-shadow: calc(var(--font-size-) / 10 * var(--plus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
-/* Transition shadow up-left */
+/* --- Transition shadow up-left --- */
 #transition_box_shadow__up_left {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -563,7 +1882,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
 
-/* Transition shadow top */
+/* --- Transition shadow top --- */
 #transition_box_shadow__top {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -573,8 +1892,8 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 #transition_box_shadow__top:hover {
   box-shadow: 0rem calc(var(--font-size-) / 10 * var(--minus-)) var(--shadow-B-) var(--color-B-);
 }
-
-/* Transition shadow bottom */
+ 
+/* --- Transition shadow bottom --- */
 #transition_box_shadow__bottom {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -585,7 +1904,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   box-shadow: 0rem calc(var(--font-size-) / 10 * var(--plus-)) var(--shadow-B-) var(--color-B-);
 }
 
-/* Transition shadow right */
+/* --- Transition shadow right --- */
 #transition_box_shadow__right {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -596,7 +1915,7 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
   box-shadow: calc(var(--font-size-) / 10 * var(--plus-)) 0rem var(--shadow-B-) var(--color-B-);
 }
 
-/* Transition shadow left */
+/* --- Transition shadow left --- */
 #transition_box_shadow__left {
   box-shadow                             : var(--shadow-A-);
   transition-duration                    : var(--duration-);
@@ -605,5 +1924,107 @@ border-radius: 1[top-left] 2[top-right] 3[bottom-right] 4[bottom-left];
 }
 #transition_box_shadow__left:hover {
   box-shadow: calc(var(--font-size-) / 10 * var(--minus-)) 0rem var(--shadow-B-) var(--color-B-);
+}
+
+/** ---------- lift ---------- */
+/* --- Transition lift x-y --- */
+#transition_tem_lift__x_y {
+  position                               : relative;
+  bottom                                 : var(--bottom-A-, 0%);
+  right                                  : var(--right-A-, 0%);
+  top                                    : var(--top-A-, 0%);
+  left                                   : var(--left-A-, 0%);
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_tem_lift__x_y:hover {
+  bottom: var(--bottom-B-, 0%);
+  right: var(--right-B-, 0%);
+  top: var(--top-B-, 0%);
+  left: var(--left-B-, 0%);
+}
+
+/* --- Transition lift up --- */
+#transition_tem_lift__up {
+  position                               : relative;
+  bottom                                 : var(--bottom-A-, 0%);
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_tem_lift__up:hover {
+  bottom: var(--bottom-B-, 10%);
+}
+
+/* --- Transition lift down --- */
+#transition_tem_lift__down {
+  position                               : relative;
+  top                                    : var(--top-A-, 0%);
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_tem_lift__down:hover {
+  top: var(--top-B-, 10%);
+}
+
+/* --- Transition lift left --- */
+#transition_tem_lift__left {
+  position                               : relative;
+  right                                  : var(--right-A-, 0%);
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_tem_lift__left:hover {
+  right: var(--right-B-, 10%);
+}
+
+/* --- Transition lift right --- */
+#transition_tem_lift__right {
+  position                               : relative;
+  left                                   : var(--left-A-, 0%);
+  transition-duration                    : var(--duration-);
+  transition-timing-function             : var(--timing-function-);
+  transition-delay                       : var(--delay-);
+}
+#transition_tem_lift__right:hover {
+  left: var(--left-B-, 10%);
+}
+
+
+
+
+
+
+#animation_transition__x_ya {
+  position: relative;
+  overflow: hidden;
+}
+
+#animation_transition__x_ya::before {
+  content: "";
+  position: absolute;
+  display: block;
+
+  background: var(--background-C-, red);
+  width: var(--width-C-, 0%);
+  height: var(--height-C-, 5px);
+
+  top: 100%;
+  left: var(--left-C-, 0);
+
+  border-radius: var(--radius-C-, 100px);
+
+  transition-property: width, height, transform;
+  transition-duration: var(--duration-, 0.3s);
+  transition-timing-function: var(--timing-function-, linear);
+  transition-delay: var(--delay-, 0s);
+}
+
+#animation_transition__x_ya:hover::before {
+  background: var(--background-D-, red);
+  width: var(--width-D-, 100%);
 }
 

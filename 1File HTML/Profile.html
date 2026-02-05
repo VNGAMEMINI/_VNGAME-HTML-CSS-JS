@@ -1,6 +1,345 @@
-<!-- 
-{git status} : xem file
-{git add .} : add tất cả 
-{git commit -m "Update $"} : tên commit 
-{git push} : đẩy lên github
- -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation với Link Pseudo-classes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .section {
+      background-color: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0066cc;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 10px;
+    }
+
+    /* ===== Ví dụ 1: Color Animation ===== */
+    @keyframes colorPulse {
+      0% {
+        color: #0066cc;
+      }
+      50% {
+        color: #ff6b6b;
+      }
+      100% {
+        color: #0066cc;
+      }
+    }
+
+    .example1 a:any-link {
+      animation: colorPulse 2s infinite;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ===== Ví dụ 2: Glow Effect ===== */
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+      }
+      50% {
+        text-shadow: 0 0 20px rgba(0, 102, 204, 1);
+      }
+      100% {
+        text-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+      }
+    }
+
+    .example2 a:any-link {
+      animation: glow 1.5s infinite;
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+    }
+
+    /* ===== Ví dụ 3: Slide In ===== */
+    @keyframes slideIn {
+      from {
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .example3 a:any-link {
+      animation: slideIn 0.6s ease-out;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #4CAF50;
+      padding: 10px 15px;
+      border-radius: 4px;
+      margin: 5px;
+    }
+
+    /* ===== Ví dụ 4: Bounce ===== */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .example4 a:any-link {
+      animation: bounce 1s infinite;
+      display: inline-block;
+      text-decoration: none;
+      color: #ff6b6b;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* ===== Ví dụ 5: Border Animation ===== */
+    @keyframes borderGlow {
+      0% {
+        border-color: #0066cc;
+        box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(0, 102, 204, 0);
+      }
+      100% {
+        border-color: #0066cc;
+        box-shadow: 0 0 0 0 rgba(0, 102, 204, 0);
+      }
+    }
+
+    .example5 a:any-link {
+      animation: borderGlow 2s infinite;
+      display: inline-block;
+      text-decoration: none;
+      color: #0066cc;
+      padding: 10px 20px;
+      border: 2px solid #0066cc;
+      border-radius: 4px;
+      margin: 5px;
+    }
+
+    /* ===== Ví dụ 6: Rotate Animation ===== */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .example6 a:any-link {
+      animation: rotate 3s linear infinite;
+      display: inline-block;
+      text-decoration: none;
+      color: #ff9800;
+      font-size: 24px;
+    }
+
+    /* ===== Ví dụ 7: Fade In Out ===== */
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .example7 a:any-link {
+      animation: fadeInOut 2s ease-in-out infinite;
+      text-decoration: none;
+      color: #9c27b0;
+      font-weight: bold;
+    }
+
+    /* ===== Ví dụ 8: Scale Animation ===== */
+    @keyframes scale {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .example8 a:any-link {
+      animation: scale 1.5s ease-in-out infinite;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #2196F3;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin: 5px;
+    }
+
+    /* ===== Ví dụ 9: Underline Animation ===== */
+    @keyframes underlineSlide {
+      0% {
+        background-position: 0% 100%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    .example9 a:any-link {
+      text-decoration: none;
+      color: #0066cc;
+      background: linear-gradient(to right, #0066cc 0%, #0066cc 100%);
+      background-position: 0% 100%;
+      background-size: 100% 2px;
+      background-repeat: no-repeat;
+      animation: underlineSlide 1s ease-in-out infinite;
+      font-weight: bold;
+    }
+
+    /* ===== Ví dụ 10: Rainbow Text ===== */
+    @keyframes rainbow {
+      0% { color: red; }
+      16.67% { color: orange; }
+      33.33% { color: yellow; }
+      50% { color: green; }
+      66.67% { color: blue; }
+      83.33% { color: indigo; }
+      100% { color: violet; }
+    }
+
+    .example10 a:any-link {
+      animation: rainbow 3s linear infinite;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 Animation với Link Pseudo-classes</h1>
+
+  <!-- Ví dụ 1 -->
+  <div class="section example1">
+    <h2>1️⃣ Color Pulse Animation</h2>
+    <ul>
+      <li><a href="https://www.google.com">Google - Màu xung động</a></li>
+      <li><a href="https://www.github.com">GitHub - Màu xung động</a></li>
+    </ul>
+  </div>
+
+  <!-- Ví dụ 2 -->
+  <div class="section example2">
+    <h2>2️⃣ Glow Effect</h2>
+    <ul>
+      <li><a href="https://www.mozilla.org">Mozilla - Hiệu ứng phát sáng</a></li>
+      <li><a href="https://www.w3.org">W3C - Hiệu ứng phát sáng</a></li>
+    </ul>
+  </div>
+
+  <!-- Ví dụ 3 -->
+  <div class="section example3">
+    <h2>3️⃣ Slide In Animation</h2>
+    <div>
+      <a href="https://www.example.com">Slide In 1</a>
+      <a href="https://www.example.com">Slide In 2</a>
+      <a href="https://www.example.com">Slide In 3</a>
+    </div>
+  </div>
+
+  <!-- Ví dụ 4 -->
+  <div class="section example4">
+    <h2>4️⃣ Bounce Animation</h2>
+    <ul>
+      <li><a href="https://www.example.com">Bounce Effect</a></li>
+    </ul>
+  </div>
+
+  <!-- Ví dụ 5 -->
+  <div class="section example5">
+    <h2>5️⃣ Border Glow Animation</h2>
+    <div>
+      <a href="https://www.example.com">Border Glow</a>
+      <a href="https://www.example.com">Border Glow</a>
+    </div>
+  </div>
+
+  <!-- Ví dụ 6 -->
+  <div class="section example6">
+    <h2>6️⃣ Rotate Animation</h2>
+    <ul>
+      <li><a href="https://www.example.com">🔄</a> Xoay vòng</li>
+    </ul>
+  </div>
+
+  <!-- Ví dụ 7 -->
+  <div class="section example7">
+    <h2>7️⃣ Fade In/Out Animation</h2>
+    <ul>
+      <li><a href="https://www.example.com">Fade In/Out Effect</a></li>
+    </ul>
+  </div>
+
+  <!-- Ví dụ 8 -->
+  <div class="section example8">
+    <h2>8️⃣ Scale Animation</h2>
+    <div>
+      <a href="https://www.example.com">Scale Up</a>
+      <a href="https://www.example.com">Scale Up</a>
+    </div>
+  </div>
+
+  <!-- Ví dụ 9 -->
+  <div class="section example9">
+    <h2>9️⃣ Underline Slide Animation</h2>
+    <ul>
+      <li><a href="https://www.example.com">Underline Slide</a></li>
+    </ul>
+  </div>
+
+  <!-- Ví dụ 10 -->
+  <div class="section example10">
+    <h2>🔟 Rainbow Text Animation</h2>
+    <ul>
+      <li><a href="https://www.example.com">Rainbow Text Effect</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
